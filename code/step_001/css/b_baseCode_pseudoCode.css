@@ -10,6 +10,12 @@ h1 {margin-top:0; border-bottom:1px solid #555;}
   background-color: #ddd;
 }
 
+.area {
+  width: 80%; height: auto;
+  margin-bottom:30px;
+  margin:auto; background-color: #fff;
+}
+
 h2 {margin:0; background-color: #adf;}
 ul {list-style: none;}
 li {width:400px; 
@@ -45,6 +51,41 @@ li {width:400px;
 
   /* 
     버튼의 기능을 할때 a요소를 많이 사용하지만, 
-    a요소는 원하는 위치로 이동하여 새로 포커스/페이지를....
+    a요소는 원하는 위치로 이동하면,
     버튼의 용도는 별도로 구분하여 사용해야한다.
+  */
+
+
+  .it {background-color: #fff;}
+  .it:hover {color:#f07;}
+  .it:focus {background-color: #763; color:#fff;}
+
+  /* 
+    tabindex속성 : -1, 0, 1
    */
+
+
+/* -------------------------------------------- */
+.before {color:#f07; font-weight:700;}
+.before:before,
+.before::before { content:"앞에 글자가 생성!!!"; color:#77f; }
+.before:hover:before,
+.before:hover::before { color:#f00;}
+
+.after {color:#37a; background-color: #ddd;}
+.after:after,
+.after::after {content:"뒤에 내용 생성!!!"; color:#333;}
+
+.other::first-letter {
+  font-size:30px; color:#f00;
+  font-weight:900;
+}
+
+.other::first-line { color:#77f; font-size:25px; }
+
+/* 
+ ':' 이 하나인경우(:) - 어떠한 행동 개념
+     (hover, active, linked, visited, focus, selected, checked)
+  ':'이 두개인경우(::) - 행동이아닌 바로 표현이되거나, 추가 옵션들을 설정하는 경우
+     (before, after, first-letter, first-line)
+*/
