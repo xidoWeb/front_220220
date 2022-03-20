@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* b_baseCode_pseudoCode.css */
+
+body { margin:0; }
+h1 {margin-top:0; border-bottom:1px solid #555;}
+
+#wrap {
+  width: 90%; height:auto; min-height:300px;
+  margin:0 auto;
+  background-color: #ddd;
+}
+
+h2 {margin:0; background-color: #adf;}
+ul {list-style: none;}
+li {width:400px; 
+  padding:10px; margin:10px; 
+  border:1px solid #555;}
+
+  .hover {background-color: #fff;}
+  .hover:hover {background-color: #f7a;}
+  .active {background-color: #dff;}
+  .active:active {color:#fff; background-color: #37a;}
+
+  a {
+    display:block; width:100%; height:30px; 
+    color:inherit; text-decoration:none;
+    background-color: #fff;
+    }
+
+  /* .link:hover {background-color: #007; color:#ddd; } */
+  /* .link:hover > a {background-color: #707; color:#ddd; } */
+  .link > a:hover {background-color: #ccc; font-weight: 700;}
+  .link > a:active {background-color: #579; color:#fff;}
+
+  .focus > a:focus { background-color: #753; color:#ff0;}
+
+  button {
+    width:30%; height:30px;
+    cursor:pointer;
+    border:0; background-color: #fff;}
+
+  .button > button:hover { background-color: #dfa;}
+  .button > button:focus { background-color: #7a5;}
+  .button > button:active { background-color: #fa7;}
+
+  /* 
+    버튼의 기능을 할때 a요소를 많이 사용하지만, 
+    a요소는 원하는 위치로 이동하여 새로 포커스/페이지를....
+    버튼의 용도는 별도로 구분하여 사용해야한다.
+   */
