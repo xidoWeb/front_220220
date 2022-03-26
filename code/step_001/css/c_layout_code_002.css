@@ -1,11 +1,26 @@
 @charset "UTF-8";
 /* c_layout_code_002.css */
+/* 16px === 12pt === 100% === 1em === 1rem  */
+/* Ps/Ai : 72dpi : 16px === 16pt  */
+
+/* 변수: 미리 설정되어있는 이름에 값을 부여하고, 필요에따라 불러와서 사용하는 기능, 때때로 그 이름의 값을 변동할 수 있는 것  
+*/
+/* 초기 값 설정 */
+html,body {
+  --color-red1: #f77;
+  --color-green1: #329664;
+}
+
 
 /* Reset.css */
 html,body {margin:0;}
 h1,h2,h3,h4,h5,h6,p {margin: 0;}
 
+/* Common.css */
 .blind {width: 0; height: 0; overflow:hidden;}
+.clearfix {height:auto;}
+.clearfix:after,
+.clearfix::after {content:""; display: block; clear:both; width: 100%; height: 0;}
 
 /* Design.css */
 /* body { background-color: #000070;} */
@@ -15,14 +30,52 @@ h1,h2,h3,h4,h5,h6,p {margin: 0;}
 
 /* #header ===================================== */ 
   #header { width:100%; height:100px; 
-    background-color: #f07;}
+    background-color: #f07;
+    background-color: var(--color-red1);
+  }
+  h1 {float:left; font-size:1rem;
+    width: 120px; height: 100px; background-color: #ccc;}
+  .navigation{float:right; 
+    width: 400px; height: 100px; background-color: #fc0;}
 
 /* #section ===================================== */ 
-  #section {width:100%; height:300px; 
-    background-color: #fa0;}
-    .sect_01{float:left; width:200px; height:300px; background-color: #329664;}
-    .sect_02{float:left; width:400px; height:300px; background-color: #555;}
+#section {width:100%;}
+.sect_01{float:left; width:40%; height:300px; 
+  background-color: #329664;
+  background-color: var(--color-green1);
+}
+
+.sect_02{float:left; width:60%; height:300px; background-color: #555;}
+
+/* #aside ===================================== */ 
+  #aside {width: 100%;}
+  .side_01{float:left; 
+    width:33.333333%; width:calc(100% / 3);
+    height:300px; background-color: #adaadd;}
+  .side_02{float:left; 
+    width:33.333334%; width:calc(100% / 3);
+    height:300px; background-color: #607259;}
+  .side_03{float:left; 
+    width:33.333333%; width:calc(100% / 3);
+    height:300px; background-color: #ad6fdd;}
+
+
+/* #article =================================== */
+#article {width: 100%;}
+.art_01 {float:left; width:30%; height:300px; background-color: #27294d;}
+.art_02 {float:left; width:70%; height:150px; background-color: #ff7259;}
+.art_03 {float:left; width:70%; height:150px; background-color: #ad6fdd;}
+
+/* #content ===================================== */ 
+#content {width: 100%; }
+.con_01 {float:right; width:30%; height:500px; background-color: #ffff4d;}
+.con_02_wrap {float:left; width:70%; height: auto;}
+.con_02 {width:100%; height:150px; background-color: #ff7259;}
+.con_03 {width:100%; height:350px; background-color: #ad6fdd;}
+
 
 /* #footer ===================================== */ 
   #footer {width:100%; height:100px;
-    background-color: #03f;}
+    background-color: #03f;
+    background-color: var(--color-red1);
+  }
