@@ -7,6 +7,7 @@
   --color-white  : #fff;
   --color-gray   : #ddd;
   --color-primary: #07a;
+  --color-point  : #fa7;
 }
 
 /* Reset.css */
@@ -23,11 +24,8 @@ a {text-decoration: none; color:inherit;}
 
 /* design ============================================= */
 /* 1024px : 1366px(국제표준) : 1920px(국내표준)  */
-body {
-  background-image: linear-gradient(45deg, #ddd, #fda, #adf);
-}
 
-#wrap { width:1200px; height:auto; min-height:3000px; 
+#wrap { width:1200px; height:3000px; 
   padding:0 10px; box-sizing: border-box; 
   margin:150px auto; 
 }
@@ -52,7 +50,29 @@ body {
 /* leading vs line-height */
 
 .default { background-color: #6E1CE9;}
-.static{ background-color: #D5A76A;}
-.fixed{ background-color: #2592E8;}
-.absolute{ background-color: #FF1D20;}
-.relative{ background-color: #7184AF;}
+.static{
+  position:static; 
+  /* z-index:-5000; 
+  top:300px; left:500px;  */
+  background-color: #D5A76A;}
+
+.fixed{ position:fixed; top:0; bottom:auto; left:auto; right:0; z-index:-100; background-color: #2592E8;}
+.absolute{ position:absolute; bottom:0; right:0; z-index:200; background-color: #FF1D20;}
+.relative{ position: relative; top:200px; left:-150px; z-index:-1; background-color: #7184AF;}
+.frame { position: relative; z-index: 0;}
+
+/* ------------------------------------ */
+.layout_01 {width: 800px; height: auto; 
+  padding-top:20px; padding-bottom: 20px; margin:50px auto; 
+  background-color: var(--color-gray);}
+
+.card_wrap{ width: 100%; height: 240px; margin-top: 20px;}
+.card_wrap > li {position: relative; float:left; width:180px; height:240px;
+  margin-right:25px; border:1px solid var(--color-black2); box-sizing: border-box;
+  background-color: var(--color-white); }
+.card_wrap > li:nth-child(4) {margin-right: 0;}
+.card_wrap a {display: block; width: 100%; height: 100%; }
+
+.tag {position: absolute; top: 0; left: 0; width:50px; height:60px; background-color: var(--color-point);}
+.image {width: 100%; height:180px; background-image:linear-gradient(30deg, #adf, #fda);}
+
