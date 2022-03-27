@@ -87,3 +87,44 @@ button {border:0; background-color: transparent; cursor: pointer; border-radius:
 .tag {position: absolute; top: 0; left: 0; width:50px; height:60px; background-color: var(--color-point);}
 .image {width: 100%; height:180px; background-image:linear-gradient(30deg, #adf, #fda);}
 
+/* .layout_02 -------------------------------------- */
+.layout_02 {
+  width: 1200px; height:auto; min-height:300px; margin:30px auto; 
+  background-color: #ddd;
+}
+h2 {width: 100%; max-width:1200px; height:auto; 
+   margin-bottom:30px; padding-top:10px; border-bottom:1px solid var(--color-black2);
+   font-size:20px;
+  }
+.product_wrap {position: relative; width: 80%; height:auto; 
+  margin:0 auto; padding-bottom:100px; 
+  
+  background-color: var(--color-white);
+}
+.product_wrap:before,
+.product_wrap::before {content:""; display:block; 
+  position: absolute; bottom:-20px; left: 0; right: 0; margin:auto;
+  width:100px; height:2px; 
+  background-color: var(--color-primary);}
+
+.more_button {position: absolute; bottom:20px; left:0; right:0; margin:auto; width:200px; height:50px;}
+.more_button button {width: 100%; height: 100%; 
+  color:var(--color-white); font-size:18px; 
+  background-color: var(--color-primary); 
+}
+
+.product_wrap ul {width: 100%; height: auto; 
+  box-sizing: border-box; padding:10px 60px; padding-top: 0; }
+.product_wrap li {width: 100%; height: 40px; 
+  margin-bottom:30px;
+  border:1px solid var(--color-black2); box-sizing: border-box; 
+  /* box-shadow:x y blur color; */
+  box-shadow:3px 3px 5px #777;
+}
+.product_wrap a { display: block; 
+  width: 100%; height: 100%; 
+  background-color: var(--color-white);}
+.product_wrap a:hover {background-color: var(--color-point);}
+.product_wrap a:focus {transform:scale(1.05);}
+
+/* display(overflow) - position - width - height - margin - padding - border - font - background - effect - etc */
