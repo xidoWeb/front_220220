@@ -8,6 +8,7 @@
   --color-gray   : #ddd;
   --color-primary: #07a;
   --color-point  : #fa7;
+  --color-green  : #afa;
 }
 
 /* Reset.css */
@@ -15,9 +16,10 @@ html,body {margin: 0; color:#333; color:var(--color-black2);}
 h1,h2,h3,h4,h5,h6,p {margin: 0;}
 ul,ol,dl {margin: 0; padding: 0; list-style: none;}
 a {text-decoration: none; color:inherit;}
+button {border:0; background-color: transparent; cursor: pointer; border-radius:0;}
 
 /* Common.css */
-.blind {width: 0; height: 0; overflow: hidden;}
+.blind {display:block; width: 0; height: 0; overflow: hidden;}
 .clearfix {height: auto;}
 .clearfix:after, .clearfix::after { content:""; 
   display: block; clear:both; width: 100%; height: 0;}
@@ -62,9 +64,18 @@ a {text-decoration: none; color:inherit;}
 .frame { position: relative; z-index: 0;}
 
 /* ------------------------------------ */
-.layout_01 {width: 800px; height: auto; 
+.layout_01 {position:relative; width: 800px; height: auto; 
   padding-top:20px; padding-bottom: 20px; margin:50px auto; 
   background-color: var(--color-gray);}
+
+.button_wrap {--size-button:40px;
+  position: absolute; z-index:100; top:50%; left:-20px; left:calc(var(--size-button) / -2);
+  width:840px; width:calc(100% + var(--size-button)); 
+  height:0;}
+
+.button_wrap button {width: var(--size-button); height: var(--size-button); background-color: #333;}
+.button_wrap .next_button {float:right;}
+.button_wrap .prev_button {float:left;}
 
 .card_wrap{ width: 100%; height: 240px; margin-top: 20px;}
 .card_wrap > li {position: relative; float:left; width:180px; height:240px;
