@@ -29,8 +29,9 @@ h1{
   box-shadow:0 3px 3px var(--color-deepGray);
 }
 
-/* nth-child란? 연속된 순서에대한 선택자
-  
+/* 
+  nth-child란? 연속된 순서에대한 선택자
+  nth-of-type이란? 선택된 요소들 중에서 해당 순번에 대한 선택자
 */
 
 .child li:first-child { font-weight:700; }
@@ -67,3 +68,10 @@ h1{
   font-weight: 400;
   font-size:16px;
 }
+
+.type2 .type_child:nth-child(3n) {color:#f00;}
+.type2 .type_child:nth-of-type(4) {color:#5a5;}
+
+.type2 p:nth-of-type(2) {background-color: #afa;}
+.type2 p:nth-child(2) {font-size: 30px;}
+

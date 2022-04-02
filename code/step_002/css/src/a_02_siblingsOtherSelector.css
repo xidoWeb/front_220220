@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* a_02_siblingsOtherSelector.css */
+
+.siblings_01 {
+  width: 80%; height: auto; 
+  padding:20px; box-sizing: border-box;
+  background-color: #acf;}
+.siblings_01 li {
+  width: 100%; height: auto; margin-bottom: 10px;
+  background-color: #fff; }
+
+.siblings_01 li:nth-child(1) {font-weight: 900; background-color: #fda;}
+
+.siblings_01 li:hover ~ li{background-color: #77a;}
+.siblings_01 li:hover + li{text-indent:30px;}
+
+.siblings_02 {
+  width: 80%; height: auto; 
+  margin:auto; padding: 10px; border:1px solid #555;}
+
+dt { width: 100%; height: 30px; margin-top: 10px; background-color: #fa0; cursor: pointer;}
+dd {display: none; width: 100%; height: auto; background-color: #fff; border-bottom: 1px solid #333;}
+.siblings_02 dt:hover{background-color: #a70; color:#fff; font-weight: 900;}
+.siblings_02 dt:hover ~ dd {display: block;}
+
+.siblings_03 {width: 600px; margin:auto; border:1px solid #567; padding: 20px;}
+.siblings_03 dt:hover{background-color: #a70; color:#fff; font-weight: 900;}
+.siblings_03 dt:hover + dd {display: block;}
+
+
