@@ -2,5 +2,7 @@
 /* variable.css */
 
 :root{
-  --color-black:#f06;
+  --color-white:#fff;
+  --color-black:#171717;
+  --color-deepGray: #555;
 }
