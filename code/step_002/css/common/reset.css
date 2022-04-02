@@ -13,6 +13,8 @@ button {border:0; background-color:transparent;
 address,cite {font-style:normal;}
 abbr { text-decoration: none;}
 
+header,article,section,aside,nav,footer,main,figure,figcaption {display: block;}
+
 @supports (color:var(--color-black)) { 
   html,body { color:var(--color-black); }
  }

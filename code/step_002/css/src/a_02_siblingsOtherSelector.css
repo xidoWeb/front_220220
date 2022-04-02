@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* a_02_siblingsOtherSelector.css */
+#wrap {width: 90%; min-width:500px; max-width:900px; height: auto; margin:auto; padding-bottom: 500px;}
+.container {width: 80%; height: auto; margin:auto; margin-bottom: 30px; background-color: #ddd;}
 
 .siblings_01 {
   width: 80%; height: auto; 
@@ -27,4 +29,10 @@ dd {display: none; width: 100%; height: auto; background-color: #fff; border-bot
 .siblings_03 dt:hover{background-color: #a70; color:#fff; font-weight: 900;}
 .siblings_03 dt:hover + dd {display: block;}
 
+
+a {padding: 1rem; background-color: #069; margin:0.5rem;}
+[href^="https://w"] {color:#fff; font-weight: 900;}
+[class="select"] { border:3px solid #aca; }
+[href$="html"] {background-color: #777;}
+/* *= |= ...... */
 
