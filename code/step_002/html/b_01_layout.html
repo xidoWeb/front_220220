@@ -17,32 +17,71 @@
   <!-- layout -->
   <div id="wrap">
     <header id="headBox">
-      <h1>company name</h1>
+      <div class="width_set">
+        <h1>company name</h1>
+        <nav class="navigation"></nav>
+      </div>
     </header><!-- // #headBox -->
 
     <main class="content_wrapper">
       <section id="slideBox">
         <h2 class="blind">슬라이드 광고영역</h2>
+
+        <div class="slide_button" hidden>
+          <button type="button" class="next">다음 내용 보기</button>
+          <button type="button" class="prev">이전 내용 보기</button>
+        </div>
+
+        <div class="slide_part">
+          광고 내용 4개 생성하는 곳
+        </div>
+
       </section><!-- // #slideBox -->
-      <article id="newBox">
-        <h2>new</h2>
+
+      <article id="newBox">        
+        <div class="width_row">
+          <h2>new</h2>
+          <ul class="indicator">
+            <!-- 인디케이터 -->
+          </ul>
+          <ul class="news_card">
+            <!-- 카드목록 생성 -->
+          </ul>
+        </div>
       </article><!-- // #newBox -->
+
       <aside id="subBox">
-        <h2>광고 2</h2>
+        <div class="width_row">
+          <h2>광고 2</h2>
+          
+        </div>
       </aside><!-- // #subBox -->
+
       <article id="bestBox">
-        <h2>best</h2>
+        <div class="width_row">
+          <h2>best</h2>
+        </div>
       </article><!-- // #bestBox -->
+      
       <article id="galleryBox">
-        <h2>gallery</h2>
+        <div class="width_row">
+          <h2>gallery</h2>
+          <div class="gallery_content">
+          </div>
+        </div>
       </article><!-- // #galleryBox -->
+
       <article id="sponsorBox">
-        <h2>sponsor</h2>
+        <h2 class="blind">sponsor</h2>
+        <div class="width_row"></div>
       </article><!-- // #sponsorBox -->
     </main>
 
     <footer id="footBox">
-      <h2>infomation</h2>
+      <div class="width_row">
+        <h2>infomation</h2>
+        <div class="foot_content"></div>
+      </div>
     </footer><!-- // #footBox -->
   </div><!-- // #wrap -->
 
