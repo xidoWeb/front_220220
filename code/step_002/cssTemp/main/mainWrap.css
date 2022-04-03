@@ -1,6 +1,8 @@
 
 /* mainWrap.css */
 #wrap {
+  --offset-height:100px; 
   width: 100%; min-width: 1440px; height:auto; min-height:500px; 
-  margin:0 auto;
+  margin:0 auto; padding-top: 100px;
+  padding-top: var(--offset-height);
 }

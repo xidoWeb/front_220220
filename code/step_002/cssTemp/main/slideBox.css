@@ -3,6 +3,23 @@
   padding-top: 100px; box-sizing: border-box;
   background-color: #999;}
 .slide_part {
+  --length:4;
+  overflow: hidden;
   width: 780px; height:400px; margin:auto;
   background-color: #777;
 }
+
+.slide_part ul {
+  width:800%; width:calc(100% * var(--length));
+  height: 100%; 
+  margin-left:0;
+  background-color: #ff0;
+}
+.slide_part li {
+  float:left; 
+  width:12.5%;
+  width:calc(100% / var(--length)); height: 100%; 
+}
+
+.slide_part li:nth-child(2n) {background-color: #aff;}
+.slide_part li:nth-child(2n+1) {background-color: #faf;}
