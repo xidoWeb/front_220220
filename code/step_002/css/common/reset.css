@@ -2,7 +2,7 @@
 /* reset.css */
 @import url("./variable.css");
 
-html,body{margin:0; color:#171717;}
+html,body{margin:0; color:#171717; font-family: 'Noto Sans KR', sans-serif;}
 h1,h2,h3,h4,h5,h6,
 p,pre,address,q,blockquote,
 ul,ol,li,dl,dt,dd, img {margin: 0; padding:0; font-size:100%; }
@@ -16,5 +16,5 @@ abbr { text-decoration: none;}
 header,article,section,aside,nav,footer,main,figure,figcaption {display: block;}
 
 @supports (color:var(--color-black)) { 
-  html,body { color:var(--color-black); }
+  html,body { color:var(--color-black); font-family:var(--font-set);}
  }
