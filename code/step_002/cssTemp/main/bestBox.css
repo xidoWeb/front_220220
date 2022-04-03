@@ -1,3 +1,6 @@
 
 /* #bestBox ========================= */
-#bestBox { width:100%; height:700px; background-color: #fff;}
+#bestBox { width:100%; height:700px; 
+  padding-top:175px; box-sizing: border-box; 
+  background-color: #fff;}
+#bestBox .width_row { height: 380px; }

@@ -1,2 +1,6 @@
 /* #sponsorBox ========================= */
-#sponsorBox { width:100%; height:100px; background-color: #999;}
+#sponsorBox { width:100%; height:100px; 
+  padding-top:10px; box-sizing: border-box;
+  background-color: #999;}
+
+#sponsorBox .width_row { height: 80px; }

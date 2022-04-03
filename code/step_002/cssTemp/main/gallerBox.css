@@ -1,2 +1,7 @@
 /* #galleryBox ========================= */
-#galleryBox { width:100%; height:750px; background-color: #aaa;}
+#galleryBox { width:100%; height:750px; 
+  padding-top:75px; box-sizing: border-box;
+  background-color: #aaa;}
+
+#galleryBox .area_title {margin-bottom: 48px; background-color: #fff;}
+#galleryBox .area_content {height: 420px; background-color: #555;}

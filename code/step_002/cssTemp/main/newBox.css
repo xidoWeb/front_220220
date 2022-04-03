@@ -1,6 +1,18 @@
 
 /* #newBox ========================= */
-#newBox { width:100%; height:700px; background-color: #fff;}
-.width_row {
-  width:100%; max-width:1200px; height: 100%;
-  margin:auto; background-color: #ccc;}
+#newBox { 
+  width:100%; height:700px; 
+  padding-top: 62px; box-sizing: border-box;
+  background-color: #fff;}
+
+.area_title {
+  width: 940px; height: 70px; 
+  margin:auto; margin-bottom: 48px;
+  background-color: #aaa;}
+.area_indicator{
+  position: absolute; bottom:-80px; left:0; right:0; margin:auto;
+  width: 140px; height: 30px; background-color: #fa0;
+}
+.area_content{
+  width: 940px; height: 370px; margin:auto; background-color: #aaa;
+}
