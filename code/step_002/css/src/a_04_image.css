@@ -1,9 +1,14 @@
 @charset "UTF-8";
 /* a_04_image.css */
 
+:root {
+  --image-icon1 : url("../../image/icons/001-destination.png");
+}
+
 #wrap {
   width: 900px; height: auto;
   margin:auto; 
+  padding-bottom: 1000px;
 }
 
 .part { 
@@ -25,4 +30,35 @@
       background-position:50% 30%;
       background-repeat: no-repeat;
     }
-    
+
+    .icon_bg {width: 100%; height:auto; background-color: #fff;}
+    .icon_bg li {
+      float:left; width:150px; height:150px; 
+      margin-right:25px; margin-bottom: 20px;
+      border: 1px solid #555;}
+
+    .icon_bg li:nth-child(5n){margin-right: 0;}
+
+    .icon_bg li:nth-child(n+1):nth-child(-n+4) {
+      background-image: var(--image-icon1);
+      background-size: auto 30%;
+    }
+
+    .icon_bg li:nth-child(1) { background-repeat:no-repeat; }
+    .icon_bg li:nth-child(2) { background-repeat:repeat-x; }
+    .icon_bg li:nth-child(3) { background-repeat:repeat-y; }
+    .icon_bg li:nth-child(4) { background-repeat:repeat; }
+
+    .icon_bg li:nth-child(n+5):nth-child(-n+8) { 
+      font-size: 0;
+      background-image: url("../../image/icons/002-travel.png");
+      background-size: auto 25%; background-repeat: no-repeat;     
+    }
+    .icon_bg li:nth-child(5) { background-position: 0 0; }
+    .icon_bg li:nth-child(6) { background-position:100% 100%;}
+    .icon_bg li:nth-child(7) { background-position:50% 50%;}
+    .icon_bg li:nth-child(8) {position: relative; background-position:100px 50px}
+    .icon_bg li:nth-child(8):before {content:""; display: block; position: absolute; 
+      left: 0; top: 0; width:100px; height:100%; background-color: #fa0;}
+    .icon_bg li:nth-child(8):after {content:""; display: block; position: absolute;
+    left: 0; top: 0; width: 100%; height:50px; background-color: #adf;}
