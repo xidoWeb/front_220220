@@ -3,6 +3,8 @@
 
 :root {
   --image-icon1 : url("../../image/icons/001-destination.png");
+  --image-icon2 : url("../../image/icons/002-travel.png");
+  --image-image1 : url("../../image/pictures/computer_02.jpg");
 }
 
 #wrap {
@@ -51,7 +53,7 @@
 
     .icon_bg li:nth-child(n+5):nth-child(-n+8) { 
       font-size: 0;
-      background-image: url("../../image/icons/002-travel.png");
+      background-image: var(--image-icon2);
       background-size: auto 25%; background-repeat: no-repeat;     
     }
     .icon_bg li:nth-child(5) { background-position: 0 0; }
@@ -62,3 +64,36 @@
       left: 0; top: 0; width:100px; height:100%; background-color: #fa0;}
     .icon_bg li:nth-child(8):after {content:""; display: block; position: absolute;
     left: 0; top: 0; width: 100%; height:50px; background-color: #adf;}
+
+    .icon_bg li:nth-child(n+9):nth-child(-n+10) {
+      background-image: var(--image-image1);
+      background-position: 50% 50%;  background-repeat: no-repeat;
+      background-color: #ada;
+    }
+
+    .icon_bg li:nth-child(9) { background-size:contain;}
+    .icon_bg li:nth-child(10) { background-size: cover;}
+
+
+    /* ------------------------------------------- */
+    .image_rs { width: 100%; height:auto;}
+    .image_rs li { float:left; width: 160px; height: 150px; 
+      margin:10px; background-color: #dda;}
+
+    .image_rs a {
+      display: block; width: 100%; height: 100%;
+      background-image: url("../../image/icons/apps.png");
+      background-repeat: no-repeat; background-position: 50% 50%;}
+    
+      /* .image_rs a>span {
+        display: block; position: absolute; z-index: -1;
+        clip:rect(0,0,0,0);
+        width:1px; height:1px; overflow: hidden;} */
+
+    .image_rs li:nth-child(1) > a { background-position: -76px -132px;}
+    .image_rs li:nth-child(2) > a { background-position: -292px -132px;}
+    .image_rs li:nth-child(3) > a { background-position: -400px -314px;}
+    .image_rs li:nth-child(n+4) > a{ 
+      background-position:-1028px -314px; transition: all 500ms ease; }
+    .image_rs li:nth-child(4) > a:focus{ background-position-x:-1674px;}
+
