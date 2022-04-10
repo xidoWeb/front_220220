@@ -3,4 +3,8 @@
   padding-top:10px; box-sizing: border-box;
   background-color: #999;}
 
-#sponsorBox .width_row { height: 80px; }
+#sponsorBox .width_row { height: 80px; overflow: hidden;}
+#sponsorBox ul { width: 1000%; height: 100%; }
+#sponsorBox li { float:left; width:140px; height: 80px; margin-right:20px; 
+  background-color:var(--color-sample);}
+#sponsorBox li:last-child { margin-right:0;}

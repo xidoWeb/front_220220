@@ -8,16 +8,12 @@
   background-color: #ccc;}
 
 .company {
-  float:left;
-  width: 120px; height: 70px;
-  background-color: #777;
-}
+  float:left;  width: 120px; height: 70px;
+  background-color: #777;}
 
 .navigation {
-  float:right;
-  width: 510px; height: 70px;
-  background-color: #777;
-}
+  float:right;  width: 510px; height: 70px;
+  background-color: #777; }
 
 .unb {float:right; width: 270px; height: 26px; margin-bottom:9px; background-color: #fff;}
 .gnb {float:right; width: 510px; height: 35px; background-color: #fff;}

@@ -4,4 +4,14 @@
   background-color: #aaa;}
 
 #galleryBox .area_title {margin-bottom: 48px; background-color: #fff;}
-#galleryBox .area_content {height: 420px; background-color: #555;}
+#galleryBox .area_content {position:relative; height: 420px; background-color: #555;}
+
+.gallery_list { 
+  position:absolute; right:0; bottom:0; 
+  width: 400px; height: auto; 
+  background-color: var(--color-primary);}
+  .gallery_list ul {width: 100%; height: auto; padding:10px; box-sizing: border-box;}
+  .gallery_list li {width:100%; height:auto; margin-bottom:10px; background-color: #fff;}
+  .gallery_list li:last-child{margin-bottom: 0;}
+
+.gallery_image { width: 600px; height: 420px; background-color: var(--color-sample);}

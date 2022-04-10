@@ -4,3 +4,11 @@
   padding-top:175px; box-sizing: border-box; 
   background-color: #fff;}
 #bestBox .width_row { height: 380px; }
+
+.best_title {float:left; width: 230px; height: 100%; background-color: var(--color-primary);}
+.best_content {overflow:hidden; float:right; width: 800px; height: 100%;}
+.best_content ul {width: 800%; height:100%;}
+.best_content li {float:left; 
+  width:240px; height: 100%; margin-right: 40px; 
+  background-color:var(--color-sample);}
+.best_content li:last-child {margin-right: 0;}
