@@ -5,15 +5,39 @@
   height:100px; 
   height:var(--offset-height);
   box-sizing: border-box; padding-top: 20px; 
-  background-color: #ccc;}
+  background-color:var(--color-white);}
 
 .company {
-  float:left;  width: 120px; height: 70px;
-  background-color: #777;}
+  --path:url("../../image/osam/common/osam_logo.svg");
+  float:left;  width: 120px; height: 70px;}
 
 .navigation {
-  float:right;  width: 510px; height: 70px;
-  background-color: #777; }
+  float:right;  width: 510px; height: 70px; }
 
-.unb {float:right; width: 270px; height: 26px; margin-bottom:9px; background-color: #fff;}
-.gnb {float:right; width: 510px; height: 35px; background-color: #fff;}
+/* .unb --------------------------- */
+.unb {
+  float:right; width: auto; height: 26px; margin-bottom:9px;}
+.unb ul {width: 100%; height: 100%;}
+.unb li {position:relative; float:left; width:auto; height:100%; padding:0 5px; }
+.unb li::before {
+  content:""; display: block; 
+  position: absolute; top: 0; bottom: 0; right: 0; margin:auto;  
+  width:1px; height: 50%; background-color: var(--color-light_gray_01);}
+
+.unb li:first-child {float:right;}
+.unb li:first-child::before {display: none;}
+.unb li::first-letter{ text-transform: uppercase;}
+.unb a {padding:4px;}
+
+/* .gnb --------------------------- */
+.gnb {float:right; width: auto; height: 35px; }
+.gnb ul {width: 100%; height: 100%;}
+.gnb li {position: relative; float: left; width:auto; height:100%; padding:0 4px; }
+.gnb li::first-letter {text-transform: uppercase;}
+.gnb li::before{content:""; display: block; 
+  position: absolute; top: 0; bottom: 0; right: 0; 
+  width: 1px; height: 50%; margin:auto; 
+  background-color: var(--color-light_gray_01);}
+.gnb li:last-child::before{display: none;}
+.gnb a {font-size:var(--font-content_02); padding:0 12px;}
+.gnb li:last-child>a {padding-right: 4px;}
