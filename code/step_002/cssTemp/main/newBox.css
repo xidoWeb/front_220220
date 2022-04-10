@@ -11,8 +11,19 @@
   background-color: #aaa;}
 .area_indicator{
   position: absolute; bottom:-80px; left:0; right:0; margin:auto;
-  width: 140px; height: 30px; background-color: #fa0;
-}
+  width: 500px; height: 30px; background-color: #fa0;
+  text-align: center;}
+.area_indicator li {display:inline-block; 
+  width: 30px; height: 30px; margin-right:5px; background-color: #adf;}
+.area_indicator li:last-child {margin-right: 0;}
+
+
+/* --------------------------- */
 .area_content{
-  width: 940px; height: 370px; margin:auto; background-color: #aaa;
-}
+  overflow: hidden;
+  width: 940px; height: 370px; margin:auto; background-color: #aaa;}
+.area_content ul {width: 400%; height: 100%;}
+.area_content li {
+  float:left; width: 300px; height: 370px; margin-right:20px;
+  background-color: var(--color-primary);}
+.area_content li:last-child {margin-right: 0;}

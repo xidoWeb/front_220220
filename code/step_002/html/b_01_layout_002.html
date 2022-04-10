@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- b_01_layout_002.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome-v6/css/all.css">
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_01_layout.css">
+  <title>웹페이지 레이아웃</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <div class="width_set">
+        <h1 class="company">company name</h1>
+        <nav class="navigation">
+          <h2 class="blind">navigation</h2>
+          <div class="unb"></div>
+          <div class="gnb"></div>
+        </nav>
+      </div>
+    </header><!-- // #headBox -->
+
+    <main class="content_wrapper">
+      <section id="slideBox">
+        <h2 class="blind">슬라이드 광고영역</h2>
+
+        <div class="slide_button">
+          <button type="button" class="next">다음 내용 보기</button>
+          <button type="button" class="prev">이전 내용 보기</button>
+        </div>
+
+        <div class="slide_part">
+          <ul>
+            <li>광고 내용 01</li>
+            <li>광고 내용 02</li>
+            <li>광고 내용 03</li>
+            <li>광고 내용 04</li>
+          </ul>
+        </div>
+
+      </section><!-- // #slideBox -->
+
+      <article id="newBox">        
+        <div class="width_row">
+          <h2 class="area_title">new</h2>
+          <ul class="area_indicator">
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+          </ul>
+          <div class="area_content">
+            <ul>
+              <li>content_01</li>
+              <li>content_02</li>
+              <li>content_03</li>
+              <li>content_04</li>
+              <li>content_05</li>
+              <li>content_06</li>
+              <li>content_07</li>
+              <li>content_08</li>
+              <li>content_09</li>
+              <li>content_10</li>
+            </ul>
+          </div>
+        </div>
+      </article><!-- // #newBox -->
+
+      <aside id="subBox">
+        <div class="width_row">
+          <div class="view_content">
+            <h2>광고 2</h2>
+          </div>
+          <div class="view_image"></div>
+        </div>
+      </aside><!-- // #subBox -->
+
+      <article id="bestBox">
+        <div class="width_row">
+          <div class="best_title">
+            <h2>best</h2>
+          </div>
+          <div class="best_content">
+            <ul>
+              <li>best_01</li>
+              <li>best_02</li>
+              <li>best_03</li>
+              <li>best_04</li>
+              <li>best_05</li>
+              <li>best_06</li>
+              <li>best_07</li>
+              <li>best_08</li>
+              <li>best_09</li>
+              <li>best_10</li>
+            </ul>
+          </div>
+
+        </div>
+      </article><!-- // #bestBox -->
+      
+      <article id="galleryBox">
+        <div class="width_row">
+          <h2 class="area_title">gallery</h2>
+          <div class="area_content">
+          </div>
+        </div>
+      </article><!-- // #galleryBox -->
+
+      <article id="sponsorBox">
+        <h2 class="blind">sponsor</h2>
+        <div class="width_row"></div>
+      </article><!-- // #sponsorBox -->
+    </main>
+
+    <footer id="footBox">
+      <div class="width_row">
+        <h2 class="info_logo">infomation</h2>
+        <div class="info_company"></div>
+      </div>
+    </footer><!-- // #footBox -->
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+</body>
+</html>

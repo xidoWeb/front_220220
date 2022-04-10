@@ -1,7 +1,18 @@
 /* #slideBox ======================= */
-#slideBox {width: 100%; height: 600px; 
+#slideBox {position: relative;
+  width: 100%; height: 600px; 
   padding-top: 100px; box-sizing: border-box;
   background-color: #999;}
+
+  /*----------------------  */
+  .slide_button {position: absolute; top: 50%; left: 0; margin-top:-20px;
+    width: 100%; height:0; background-color: #fff;
+  }
+
+  .next{float:right; width:60px; height:40px; background-color: var(--color-primary);}
+  .prev{float:left; width:60px; height:40px; background-color: var(--color-primary);}
+
+  /*----------------------  */
 .slide_part {
   --length:4;
   overflow: hidden;
