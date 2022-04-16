@@ -1,8 +1,6 @@
 @charset "utf-8";
 /* a_07_unit.css */
-:root {
-  font-size:16px;
-}
+:root { font-size:16px; }
 
 /* reset.css */
 
@@ -55,7 +53,21 @@ font-size:16px;}
 
 /* % ------------------------------------------ */
 /* %계산방법 : 사용크기 / 기준크기 * 100  */
-.unit_per {width:600px;}
-.unit_per .outer{width:91.666667%;}
-.unit_per .inner{width:90.909091%;}
-.unit_per span{width:80%;}
+.unit_per {width:600px; font-size:100%;}
+.unit_per .outer{width:91.666667%; 
+  font-size: 200%;}
+.unit_per .inner{width:90.909091%; font-size:50%;}
+.unit_per span{width:80%; font-size:200%;}
+
+/* em ------------------------------------ */
+.unit_em {width: 37.5em; font-size:1em;}
+.unit_em .outer{width: 17.1875em; font-size:2em;}
+.unit_em .inner{width: 31.25em; font-size: 0.5em;}
+.unit_em span{width: 12.5em; font-size: 2em;}
+
+/* rem ------------------------------------ */
+.unit_rem {width: 660px; font-size:16px; width: 37.5rem; font-size:1rem;}
+.unit_rem .outer{ width: 34.375rem; font-size: 2rem;}
+.unit_rem .inner{ width: 31.25rem; font-size:1rem;}
+.unit_rem span{width: 25rem; font-size: 2rem;}
+
