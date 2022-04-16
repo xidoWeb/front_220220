@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* a_06_displayFlex.css */
+h1, h2{margin: 0; padding: 0; }
+ul {list-style: none; margin: 0; padding: 0;}
+/* ------------------------------- */
+#wrap {
+  width: 90%; height: auto;
+  margin:auto; padding-bottom:500px; 
+  border:1px solid #555;
+}
+
+.part {
+  width: 100%; height: auto;
+  box-sizing:border-box; padding:10px;
+}
+.part ul {
+  width: 100%; height: auto;
+  box-sizing:border-box; border:1px solid #f06;
+}
+.part li {
+  width:100px; height:100px;
+  background-color: #adf;
+  background-image: linear-gradient(45deg, #fcf, #7a7);
+}
+
+/* ----------------------------------------- */
+p {background-color: #ddd;}
+p > img {float:left; margin-right: 10px;}
+p:after, p::after{content:""; display: block; clear: both;}
+
+/* ----------------------------------------- */
+.float > li {float:left; margin-left: 20px;}
+.float > li:first-child {margin-left: 0;}
+.float:after, 
+.float::after {content:""; display:block; clear:both;}
+
+/* ---------------------------------------- */
+.flex_01 { display:flex; }
