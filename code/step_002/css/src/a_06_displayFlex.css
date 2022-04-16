@@ -36,3 +36,87 @@ p:after, p::after{content:""; display: block; clear: both;}
 
 /* ---------------------------------------- */
 .flex_01 { display:flex; }
+.flex_01 li {margin-left:20px;}
+.flex_01 li:first-child {margin-left:0;}
+/* ---------------------------------------- */
+.part .flex_02 {
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+/* --------------------------------------- */
+
+.float_02 {position:relative; background-color: #add;}
+.float_02:after {content:""; display: block; clear: both;}
+.float_02 li:first-child {float:left;}
+.float_02 li:nth-child(2) {position: absolute; left: 0; right: 0; top: 0; margin:auto;}
+.float_02 li:last-child {float:right;}
+
+/* --------------------------------------- */
+
+@supports (display:flex){
+  .float_02 {display:flex; justify-content: space-between;}
+  .float_02 li {float:none;}
+  .float_02 li:nth-child(2) {position:static;}
+}
+
+/* --------------------------------------- */
+.part .flex_03 {
+  width:800px; height:600px;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content:center;
+}
+
+.part .flex_04 {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 600px; height: 400px; 
+  align-items:center;
+}
+
+.flex_04 > li {  
+  margin:0 10px;
+  text-align: center;
+}
+
+.flex_04 > li:nth-child(1){ line-height:100px; }
+.flex_04 > li:nth-child(2){
+  box-sizing:border-box; padding-top:40px; }
+
+.flex_04 > li:nth-child(3){position: relative;}
+.flex_04 > li:nth-child(3) > span{ 
+  display: block;
+  position: absolute; top: 0; bottom: 0; left: 0; 
+  width: 100%; height:0; 
+  margin:auto;
+  text-align: center;}
+
+  .flex_04 > li:nth-child(3) i {
+    display: block; width: 100%; height: auto;
+    font-style: normal;
+    background-color: #fff;
+    transform:translateY(-50%);
+  }
+
+  .flex_04 > li a{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%; height: 100%;
+  }
+
+  .flex_05 {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .flex_05 li:first-child {order:2;}
+  .flex_05 li:nth-child(2) {order:-999;}
+
+  /* 크로스 브라우징 처리 유념!! */
