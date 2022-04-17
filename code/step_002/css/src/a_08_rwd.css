@@ -81,7 +81,7 @@ h1{width: 100px; height: 60px;
     font-size: inherit;
     color:inherit;
   }
-  .mobile_menu:hover + ul { display: flex;}
+  /* .mobile_menu:hover + ul { display: flex;} */
 }
 
 /* 태블릿 600px */
