@@ -27,6 +27,7 @@
 h1{width: 100px; height: 60px;
   background-color: #adf;}
 .gnb{ height: 60px; background-color: #fda; }
+.mobile_menu {display: none;}
 .gnb ul {
   display:flex;
   justify-content: space-between;
@@ -48,20 +49,59 @@ h1{width: 100px; height: 60px;
 
 /* 스마트폰: 320px */
 @media all and (max-width:599px) {
-  body{background-color: #add;}
-  .box {top:200px;}
+  #wrap {min-width: 320px;}
+  #headBox {
+    padding:10px 20px;
+    justify-content: space-between;
+  }
+  h1 {position:relative; z-index:1100;}
+  .gnb ul {display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed; top:0; left:0;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    padding:80px 30px;
+    background-color: #fa7;
+  }
+  .gnb li {padding:20px 0;}
+  .gnb li::before {
+    bottom: 0; top:auto; left:0; 
+    width:10px; height:2px;}
+
+  .mobile_menu {
+    display: block;
+    position: relative; z-index: 1100;
+    width: 60px; height: 60px;
+    font-size:1.5rem;
+    color:#f06;
+    background-color: #add;
+  }
+  .mobile_menu button {
+    font-size: inherit;
+    color:inherit;
+  }
+  .mobile_menu:hover + ul { display: flex;}
 }
 
 /* 태블릿 600px */
 @media all and (min-width:600px) and (max-width:1023px) {
-  body {background-color: var(--color-sample);}
-  .box{top:auto; bottom:0;}
-}
+  #wrap {min-width:auto;}
+  #headBox { justify-content: space-between; }
+  .gnb ul {display: none;}
+  .mobile_menu {
+    display: block;
+    width: 60px; height: 60px;
+    font-size:1.5rem;
+    color:#f06;
+    background-color: #add;
+  }
+} 
 
 /* 노트북: 1024px */
-@media all and (min-width:1024px) and (max-width:1399px) {
+/* @media all and (min-width:1024px) and (max-width:1399px) {
   body {background-color: var(--color-yellow_01);}
-}
+} */
 
 
 
@@ -82,4 +122,23 @@ h1{width: 100px; height: 60px;
 2. 텍스트의 크기는 pc의 크기와, tablet, mobile 규격들이 대부분 같다.(일부 예외)
 3. 명도대비는 이유불문 항상 고려해서 제작
 4. 파일관리를 용이하게 파악 할 수 있도록 처리(필요에따라서는 가이드문서를 제작하여 처리)
+*/
+
+
+/* 
+display
+overflow
+position
+width/height
+margin/padding/border/box-sizing
+font-family/font-weight/font-style/line-height/letter-spacing/word-spacing...
+background-color/background-image/background-repeat.....
+effect처리내용
+etc...
+
+id="camelCase"
+class="under_score"
+name="doubleUnder__score"
+
+OOCSS/SMACSS/BEM
 */
