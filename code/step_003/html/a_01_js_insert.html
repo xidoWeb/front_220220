@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script> 
+    console.log('head 내부에 작성');
+  </script>
+
+</head>
+<body>
+  <div id="wrap">    
+    <script>
+      console.log('body 내부 어딘가에 작성');
+    </script>
+    <div onClick="function test(){ console.log('test')} test()">      
+      코드를 작성....
+      <p>요즘 나오는 프레임워크 및 라이브러리는 html코드를 js문서에서 작성하는 형태로 변경되는 중이며, 이에 따른 기능부여를 좀더 원할하게 처리하기 위해 인라인 스크립트 형식으로 사용한다.</p>
+    </div>
+  </div>
+
+  <script>
+    console.log('body 끝나기 직전에 작성');
+  </script>
+  <script src="../js/src/test1.js"></script>
+  <script fetch src="../js/src/test2.js"></script>
+</body>
+</html>
