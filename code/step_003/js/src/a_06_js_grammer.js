@@ -80,3 +80,4 @@ areaListEl.forEach(function(it, index){
     relEl.innerText = product;
   });
 });
+
