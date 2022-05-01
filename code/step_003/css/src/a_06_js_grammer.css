@@ -1,0 +1,46 @@
+
+body,html {margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6,p {margin: 0; padding: 0;}
+ul,ol {margin: 0; padding: 0; list-style: none;}
+hr {
+  margin: 0; border: 0; 
+  margin:1rem auto; 
+  border-top: 1px solid #777;
+}
+
+#wrap { width: 900px; height: auto; margin:auto; }
+
+.area {
+  width: 800px; height: auto;
+  margin:auto;
+  border:1px solid #aaa;
+  padding:1rem; box-sizing: border-box;
+}
+h2 { font-size:1.5rem; }
+h2::first-letter {text-transform: capitalize;}
+
+.area ul {
+  width: 100%; height: 250px; background-color: #ddd;
+}
+
+.card ul {display: flex; flex-wrap: wrap; height:auto;}
+.card li {width: 200px; height: 300px;
+    margin-right:1rem; margin-bottom: 2rem;
+    padding:0.5rem; box-sizing: border-box;
+    border:1px solid #555; border-radius:0.3rem; 
+    background-color: #fff;}
+.card a {
+  display: block; width: 100%; height: 100%; 
+  color:inherit; text-decoration: none;}
+.card a:focus { 
+  outline: 3px solid #c70; outline-offset:3px;}
+.card .image { 
+  width: 100%; height: 150px; 
+  background-repeat: no-repeat;
+  background-position: 50% 50%; 
+  background-size: cover;
+  background-color: #dff;}
+.card dl {width: 100%; height: auto; margin-top: 1rem;}
+.card dt {font-size:1.1rem; font-weight:700; }
+.card dt::first-letter { text-transform: uppercase;}
+.card dd { margin: 0; color:#333;}
