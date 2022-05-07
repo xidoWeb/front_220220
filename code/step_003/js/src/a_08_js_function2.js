@@ -80,3 +80,54 @@ console.clear();
 console.log( my1 );
 console.log( my1.user );
 console.log( my1.gender );
+
+
+// this: window
+// this: 생성자함수를 이용하여 처리할 경우 해당하는 변수명
+// ----------------------------------------------------
+// 1. data를 객체화 시킬때 매번 그 값을 설정하는건?
+
+function UserData(key, id, user, phone){
+  this.key = key;
+  this.id = id;
+  this.userName =  user;
+  this.phoneNumber = phone;
+}
+
+let num = 0;
+const userDataSet = [];
+
+const fnInsertData = function(data1, data2, data3){
+  const userSet = new UserData(num+=1, data1, data2, data3);
+  userDataSet.push(userSet);
+  // console.log( userDataSet );
+}
+
+// console.log( userDataSet[0].key )
+
+// 시나리오 
+// 각 항의 내용에 값을 입력 후 전송버튼을 누르면 데이터를 저장하게 되는 형식
+console.clear();
+const userId = document.querySelector('#userId');
+const userName = document.querySelector('#userName');
+const phoneNumber = document.querySelector('#phoneNumber');
+const sendBtn = document.querySelector('.send_btn');
+
+// 전송버튼에 이벤트발행(클릭 후 데이터의 값을 체크)
+sendBtn.addEventListener('click', function(e){
+  e.preventDefault(); // 선행되는 이벤트기능을 막기
+
+  fnInsertData(userId.value , userName.value, phoneNumber.value); // 값 생성자처리
+
+  // html문서 value 초기화
+  userId.value      = '';
+  userName.value    = '';
+  phoneNumber.value = '';
+
+  console.dir(userDataSet);
+});
+
+
+// constructor
+// class
+

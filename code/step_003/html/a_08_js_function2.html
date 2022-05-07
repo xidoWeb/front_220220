@@ -1,14 +1,53 @@
 <!DOCTYPE html>
+<!-- a_08_js_function2.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css"> -->
+  <link rel="stylesheet" href="../css/src/a_08_js_function2.css">
   <title>Document</title>
 </head>
 <body>
   <div id="wrap">
     <h1><a href="./content.html">js basic</a></h1>
+
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>개인정보</legend>
+        <div>
+          <label for="userId">
+            <span class="blind">사용자 </span>
+            ID
+            <span class="blind">를 입력해 주세요.</span>
+          </label>
+          <input type="text" id="userId" name="user__Id" value="" placeholder="사용자 ID 입력" />
+        </div>
+        <div>
+          <label for="userName">
+            <span class="blind">사용자 </span>
+            이름
+            <span class="blind">을 작성해주세요.</span>
+          </label>
+          <input type="text" id="userName" name="user__Name" value="" placeholder="사용자 이름" />
+        </div>
+        <div>
+          <label for="phoneNumber">
+            <span class="blind">사용자의 </span>
+            연락처
+            <span class="blind">열한자리 또는 열두자리의 숫자를 작성해주세요.</span>
+          </label>
+          <input type="tel" id="phoneNumber" name="phone__Number" value="" placeholder="연락처" /> 
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="blind">버튼 영역</legend>
+        <button type="submit" class="send_btn">전송</button>
+      </fieldset>
+    </form>
   </div>
   <script defer src="../js/src/a_08_js_function2.js"></script>
 </body>

@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* a_08_js_function2.css */
+
+.blind {display: block; 
+  position: absolute; z-index: -1; clip:rect(0,0,0,0);
+  width: 0; height: 0; overflow: hidden;}
