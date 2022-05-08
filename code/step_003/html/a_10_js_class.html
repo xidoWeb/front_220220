@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <!-- <h1><a href="./content.html">js basic</a></h1> -->
+  </div>
+
+  <script defer src="../js/src/a_10_js_class.js"></script>
+  <script defer>
+    const wrap = document.querySelector('#wrap');
+    // wrap.innerHTML = `<h1><a href="./content.html">js basic</a></h1>`;
+    const title1 = document.createElement('h1');
+    title1.innerHTML = '<a href=""></a>';
+    const titleLink = title1.querySelector('a');
+    titleLink.href = './content.html';
+    title1.setAttribute('data-link', '안녕하세요.');
+    titleLink.innerText = 'js basic';
+    wrap.append(title1);
+  </script>
+</body>
+</html>
