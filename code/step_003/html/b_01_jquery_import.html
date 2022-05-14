@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- b_01_jquery_import.html -->
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+  <div id="wrap">
+    <h1><a href="./content.html">js base</a></h1>
+    <dl>
+      <dt>title</dt>
+      <dd>content</dd>
+    </dl>
+  </div>
+
+  <script fetch src="https://unpkg.com/jquery"></script>
+  <script fetch src="https://unpkg.com/jqueryui"></script>
+  <script>
+    (function($){
+      $('#wrap').css({'background-color':'#0ad'});
+      $('#wrap').on('click', function(){
+        $('#wrap').animate({backgroundColor:'#fa0'});
+      });
+
+      $('dt').on('click', function(){
+        $('dd').slideUp();
+      });
+    })(jQuery);
+    // 개발속도(크로스브라우저) -> 속도(구동속도, 개발속도)
+    // 브라우저의 코드 표준화
+  </script>
+</body>
+</html>
