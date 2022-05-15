@@ -31,7 +31,7 @@ const jsArea = document.querySelector('.js_area');
 // fadeIn, fadeOut
 (function(){
   
-  // BtnDt를 이벤트발생(클릭)시, dd를 부드럽게 fade처리로 나타나게 만들기
+  // BtnDt를 이벤트발생(클릭)시, dd를 부드럽게 fade처리로 나타나게/사라지게 만들기
   
   // 변수 영역 -------------------------------------
   const jsBtn = jsArea.querySelector('.btn_02');
@@ -91,8 +91,50 @@ const jsArea = document.querySelector('.js_area');
   let   PERMISSION = true;
   let   timed = 100;
   let   ddHeight = 0;
-  
+  let   runningInterval;
+
   // 함수영역 -----------------------------------
+
+  // fnCheck() : 권한설정 및 BtnDd의 display상태 파악
+  const fnCheck = function(){
+    PERMISSION = false;
+    return window.getComputedStyle(BtnDd).display === 'none';
+  };
+  
+  // fnBlockDd() : BtnDd 나타날경우에 기본 세팅
+  const fnBlockDd = function(){
+    BtnDd.style.display  = 'block';
+    BtnDd.style.height   = ddHeight + 'px';
+    BtnDd.style.overflow = 'hidden';
+  };
+
+  const fnSlideDown = function(){
+    runningInterval = setInterval(()=>{
+      if(ddFinalHeight > ddHeight){
+        ddHeight += 1;
+        BtnDd.style.height = ddHeight + 'px';
+      }else{
+        ddHeight = ddFinalHeight;
+        clearInterval(runningInterval);
+        PERMISSION = true;
+      }
+    }, timed/100);
+  };
+
+  const fnSlideUp = function(){
+    runningInterval = setInterval(()=>{
+      if(ddHeight > 0){
+        ddHeight -= 1;
+        BtnDd.style.height = ddHeight + 'px';
+      }else{
+        ddHeight = 0;
+        BtnDd.removeAttribute('style');
+        clearInterval(runningInterval);
+        PERMISSION = true;
+      }
+    }, timed/100);
+  };
+
   // 선택자.outerHeight(); -> jQuery에서 높이값 가져오기 기능을 구현
   const fnGetHeight = function(){
     BtnDd.style.display = 'block';
@@ -101,48 +143,24 @@ const jsArea = document.querySelector('.js_area');
     return size;
   }; 
 
-  // 추가 변수  -------------------------------
-  const ddFinalHeight = fnGetHeight(); 
-
-  // 이벤트 수행 -------------------------------
-  BtnDt.addEventListener('click', function(event){
+  const fnClickEvent = function(event){
     event.preventDefault();
     if(PERMISSION){
-      PERMISSION = false;
-
-      const displayEl = window.getComputedStyle(BtnDd).display === 'none';
+      const displayEl = fnCheck();
       if(displayEl){
-        BtnDd.style.display = 'block';
-        BtnDd.style.height = ddHeight + 'px';
-        BtnDd.style.overflow = 'hidden';
-
-        let runningInterval = setInterval(()=>{
-          if(ddFinalHeight > ddHeight){
-            ddHeight += 1;
-            BtnDd.style.height = ddHeight + 'px';
-          }else{
-            ddHeight = ddFinalHeight;
-            clearInterval(runningInterval);
-            PERMISSION = true;
-          }
-        }, timed/100);
-
+        fnBlockDd();
+        fnSlideDown();
       }else{
-
-        let runningInterval = setInterval(()=>{
-          if(ddHeight > 0){
-            ddHeight -= 1;
-            BtnDd.style.height = ddHeight + 'px';
-          }else{
-            ddHeight = 0;
-            BtnDd.removeAttribute('style');
-            clearInterval(runningInterval);
-            PERMISSION = true;
-          }
-        }, timed/100);
+        fnSlideUp();
       }
     } // if(PERMISSION)
-  }); // BtnDt.addEventListener('click')
+  };
+
+  // 추가 변수  -------------------------------
+  const ddFinalHeight = fnGetHeight(); 
+  // 이벤트 수행 -------------------------------
+  // BtnDt를 이벤트발생(클릭)시, dd를 부드럽게 slide 처리로 나타나게/사라지게 만들기
+  BtnDt.addEventListener('click', fnClickEvent); // BtnDt.addEventListener('click')
 })();
 
 
