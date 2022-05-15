@@ -87,14 +87,24 @@ const jsArea = document.querySelector('.js_area');
   const jsBtn = jsArea.querySelector('.btn_03');
   const BtnDt = jsBtn.querySelector('dt');
   const BtnDd = jsBtn.querySelector('dd');
-  const ddFinalHeight = 200;
+  // const ddFinalHeight = 200;
   let   PERMISSION = true;
   let   timed = 100;
   let   ddHeight = 0;
+  
+  // 함수영역 -----------------------------------
+  // 선택자.outerHeight(); -> jQuery에서 높이값 가져오기 기능을 구현
+  const fnGetHeight = function(){
+    BtnDd.style.display = 'block';
+    const size = BtnDd.offsetHeight;
+    BtnDd.removeAttribute('style');
+    return size;
+  }; 
 
+  // 추가 변수  -------------------------------
+  const ddFinalHeight = fnGetHeight(); 
 
-
-  // 이벤트 수행
+  // 이벤트 수행 -------------------------------
   BtnDt.addEventListener('click', function(event){
     event.preventDefault();
     if(PERMISSION){
@@ -148,3 +158,8 @@ const jsArea = document.querySelector('.js_area');
 
   // css문서에서 작성한 속성값을 가져올때 사용
   // console.log(window.getComputedStyle(Btn01Dd).display);
+
+
+  // const wrap = document.querySelector('#wrap');
+  // console.log(wrap.clientHeight);
+  // console.log(wrap.offsetHeight);
