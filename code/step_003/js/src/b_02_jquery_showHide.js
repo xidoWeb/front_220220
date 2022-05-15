@@ -4,7 +4,8 @@
   const jqArea = $('.jquery_area');
   const btn_01 = jqArea.find('.btn_01');
   const btn_01Dt = btn_01.find('dt');
-  const btn_01Dd = btn_01.find('dd');
+  // const btn_01Dd = btn_01.find('dd');
+  const btn_01Dd = btn_01Dt.next('dd');
 
   const btn_02 = jqArea.find('.btn_02');
   const btn_02Dt = btn_02.find('dt');
