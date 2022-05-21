@@ -1,0 +1,6 @@
+#root { width: 900px; height: auto; padding:1rem; margin:auto; }
+h1 {margin: 0; padding: 0.5rem; background-color: #ddf; text-align: center;}
+.part {width: 100%; height: auto; box-sizing:border-box; padding:0.5rem; border:1px solid #777; margin-bottom: 1rem;}
+ul{padding: 0; margin: 0; list-style: none;}
+li{padding: 0.2rem; margin-bottom: 0.5rem;}
+a {color:#555; text-decoration: none; padding:0.3rem 1rem;}
