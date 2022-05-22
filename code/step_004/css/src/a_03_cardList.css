@@ -5,13 +5,13 @@
   --height:60px;
   width: 100%; min-width:960px; 
   height:auto; min-height:500px;
-  margin:auto; padding-top:calc(var(--height) + 20px);
+  margin:auto; padding-top:calc(var(--height) + 20px); padding-bottom: 30rem;
   background-color: var(--color-light_gray_01);
 }
 
 
 #headBox { 
-  position: fixed; top:0; left:0; 
+  position: fixed; top:0; left:0; z-index:1000;
   width: 100%; height:var(--height); 
   box-sizing: border-box; padding:1rem; 
   background-color: var(--color-white);
@@ -30,7 +30,7 @@
 h2 {
   width: 100%; height: auto; margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  font-size: 1.5rem; text-indent: 2rem;
+  font-size:var(--font-title_04); text-indent: 2rem;
   border-bottom:var(--border-line_01);
 }
 
@@ -68,6 +68,75 @@ h2 {
 
 .content__part__menu_type button {
   width:100%; height: 100%;
-
 }
 
+.content__part__menu_list {
+  width: 100%; height:auto; border:1px solid #333; 
+  margin-top: 1rem; padding-top: 1.5rem;
+}
+
+.content__part__menu_list h3 {
+  width: 100%; height:auto; margin-bottom: 0.2rem;
+  text-indent:1rem; font-size: var(--font-title_05); color:var(--color-deep_black_01);
+}
+
+.content__part__menu_list p {
+  width: 100%; height:auto; box-sizing: border-box; padding-left:1rem;
+  color:var(--color-deep_gray)
+}
+
+.content__area__menu__items {
+  width: 100%; height: auto;
+  margin-top:1rem; box-sizing: border-box;
+}
+.content__area__menu__items ul {
+  width: 100%; background-color: #dff;
+  display:flex; justify-content:center;
+  flex-wrap:wrap;
+}
+.content__area__menu__items li {
+  width: 300px; height: 380px; 
+  box-sizing: border-box;
+  padding:1rem;   
+  background-color: var(--color-white);
+}
+
+.outline {
+  position: relative;
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  padding:0.5rem; 
+  border:1px solid #567;
+}
+
+.image {
+  width: 100%; height: 180px; 
+  margin-bottom:0.7rem; 
+  border-bottom-right-radius:1rem;
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.card dl { 
+  width: 100%; height:auto;}
+.card .title {
+  width: 100%; height:24px;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card dd {width:100%;}
+.narr{height:60px; margin-bottom: 0.2rem; color:var(--color-deep_gray);}
+.price{
+  text-align: right; font-size:var(--font-content_02); font-weight: 700;
+}
+.option{ 
+  position: absolute; left:1rem; bottom: 0.5rem;
+  font-size:var(--font-content_04); color:var(--color-white); }
+.option span {
+  padding:0.2rem 0.5rem; background-color:var(--color-light_gray_03); 
+  border-radius:1rem;
+}
