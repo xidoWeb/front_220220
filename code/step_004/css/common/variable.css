@@ -48,4 +48,5 @@
 
   /* Border styles */
   --border-line_01 : 1px solid var(--color-deep_gray);
+  --border-line_02 : 4px solid var(--color-primary_01);
 }
