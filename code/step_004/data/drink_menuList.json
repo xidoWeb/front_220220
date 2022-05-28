@@ -198,5 +198,15 @@
     "option": "hot, ice, 4season",
     "path": "ade",
     "filename": "ade_05.jpg"
+  },
+  {
+    "key": 21,
+    "category": "스무디",
+    "product": "키위스무디",
+    "narr": "설명 21",
+    "price": 5700,
+    "option": "ice, season",
+    "path": "smoothie",
+    "filename": "smoothie_01.jpg"
   }
 ]
