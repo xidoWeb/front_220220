@@ -91,8 +91,11 @@ h2 {
 }
 .content__area__menu__items ul {
   width: 100%; background-color: #dff;
-  display:flex; justify-content:center;
-  flex-wrap:wrap;
+  /* display:flex; justify-content:center; */
+  /* flex-wrap:wrap; */
+  display:grid; justify-content:space-around;
+  grid-template-columns:repeat(auto-fill, minmax(300px,  350px));
+  row-gap: 20px;
 }
 .content__area__menu__items li {
   width: 300px; height: 380px; 

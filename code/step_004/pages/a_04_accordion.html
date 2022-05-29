@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- a_04_accordion.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome-6/css/all.css">
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/a_04_accordion.css">
+
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/favicon.png">
+  <title>accordion</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="./contents.html">js - dom</a></h1>
+    </header>
+    <article id="contentBox">
+      <h2>아코디언 메뉴</h2>
+      <div class="accordion_area">
+        <dl>
+          <dt><button type="button"><span>제목_01</span><i class="fa-solid fa-arrow-down"></i></button></dt>
+          <dd>
+            <div class="content">
+            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolorem adipisci minima dolor, commodi sint, itaque maxime numquam perspiciatis cupiditate harum.
+            </div>
+          </dd>
+        </dl>
+        <dl>
+          <dt><button type="button"><span>제목_02</span><i class="fa-solid fa-arrow-down"></i></button></dt>
+          <dd>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque iusto nesciunt sequi illo doloribus, quaerat voluptate laudantium tempora commodi repellendus. Dolores omnis laudantium impedit.
+            </div>
+          </dd>
+        </dl>
+        <dl>
+          <dt><button type="button"><span>제목_03</span><i class="fa-solid fa-arrow-down"></i></button></dt>
+          <dd>
+            <div class="content">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, eos.
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </article>
+  </div>
+
+  <!-- script -->
+  <script defer src="../js/src/a_04_accordion.js"></script>
+</body>
+</html>
