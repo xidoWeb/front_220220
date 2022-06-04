@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* content.scss */
+// @import "../common/variable";
+@import "../common/mixin";
+// 한줄주석은 변환 X
+
+
+html, body { @extend %full; } 
+.box { @include full(); }
+
+#wrap {
+  width:900px; height:auto; min-height: 500px;
+  margin:auto;
+  color:mix($white , $black);
+  background-color: darken($white, 15%);
+}
+
+#header {
+  width: 100%; height: 300px; 
+  color: rgba($black, 0.4);
+  background-color: lighten($black, 70%);
+}
+
+h1 {
+  width: 30px; height: 30px; 
+  // background-image:url('../img/common/logo.png');
+  // background-repeat: no-repeat;
+  // background-position: 50% 50%;
+  // background-size: contain;
+  $url : '../img/common/';
+  background: {
+    image:url($url + 'logo1.png');
+    repeat: no-repeat;
+    position: 50% 50%;
+    size: contain;
+  }
+
+  // 22.06.04 수정
+  //  font:weight normal 16px/10px arial, myriad; 
+  font: {
+    weight: 700;
+    style:normal; 
+    size:20px;
+    family:'arial', 'myriad pro', sans-serif;
+  }
+  line-height:30px;
+  // 22.06.04 수정끝
+ 
+} // h1
+
+
+.news li .img {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+$url : '../img/newsData/';
+$news : ('one.jpg', 'two.png', 'outer.jpg', 'a.png', 'b.png');
+// nth(변수명, 순번)  , length(변수명)
+
+// .news li:nth-child(1) .img { background-image: url($url + nth($news, 1)   );}
+// .news li:nth-child(2) .img { background-image: url($url + nth($news, 2)   );}
+// .news li:nth-child(3) .img { background-image: url($url + nth($news, 3)   );}
+
+@for $i from 1 through length($news) {
+  .news li:nth-child(#{$i}) .img { 
+    background-image: url($url + nth($news, $i));
+  }
+}
+
+$co : 'coffee';
+$coffee : ('americano','cafelatte','moccagold','esspresso');
+@mixin coffee($var, $name){
+  background-image:url($url + nth($var, $name) + '.png');
+}
+
+// .coffee_americano { background-image:url($url + nth($coffee, 1) + '.png');}
+// .coffee_cafelatte { background-image:url($url + nth($coffee, 2) + '.png');}
+// .coffee_moccagold { background-image:url($url + nth($coffee, 3) + '.png');}
+// .coffee_esspresso { background-image:url($url + nth($coffee, 4) + '.png');}
+@for $i from 1 through length($coffee) {
+  .#{$co}_#{nth($coffee, $i)} { @include coffee($coffee, $i); }
+}
+/* ------------------------------------- */
+/*
+  #contentBox { width: 100%; height: 400px; margin: auto;}
+  #contentBox h2 { position: absolute; width: 0; height: 0;  overflow: hidden;}
+  #contentBox ul {
+    width: 100%; height: 300px; 
+    padding-top: 10px; margin-bottom: 10px; border-bottom: 1px solid #333; }
+  #contentBox ul li {
+    float:left; width:30px; height: 40px; 
+    margin:20px; padding:10px; border:1px solid #777; }
+  #contentBox ul li a{ display: block; width: 100%; height: 100%; 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url('../img/news/a.png'); }
+*/
+
+#contentBox { width: 100%; height: 400px; margin: auto;
+
+  & h2 { position: absolute; width: 0; height: 0;  overflow: hidden;}
+  & ul { width: 100%; height: 300px; 
+    padding-top: 10px; margin-bottom: 10px; border-bottom: 1px solid #333;
+  } // ul
+
+  & li {
+    float:left; width:30px; height: 40px; 
+    margin:20px; padding:10px; border:1px solid #777;
+  
+  }// li
+  & li a{ 
+    display: block; width: 100%; height: 100%; 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url('../img/news/a.png'); }
+
+  & li a {
+    &:hover { color:#fff; }
+    &:focus { color:#af0; }
+    &:visited {color:#aaf;}
+  }
+
+} // #contentBox
+  
+
+
+  
+
+
+
+
+
+
