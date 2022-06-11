@@ -1,0 +1,63 @@
+// headBox.scss
+
+#headBox {
+  width: 100%; min-width:480px; height: 3.125rem; 
+  box-sizing: border-box; padding:0.625rem;
+  background-color: #ededed;
+
+  display:flex;
+  justify-content: space-between;
+}
+
+h1 { width:7.5rem; height:2.125rem; background-color: #fac;}
+
+.navigation_part {position: relative;}
+  .navi_btn { display:none;}
+  .navi_area {display:block;}
+  .unb {
+    & ul {width: auto; height:auto;
+      display:flex; justify-content: flex-end; gap:1.875rem;
+      font-size:10px; 
+    }
+  }// .unb
+
+  .gnb {
+    & ul {width: auto; height:auto;
+      display:flex; justify-content: flex-end; gap:2.5rem;
+      font-size:14px;
+    }
+  }// .gnb
+
+
+
+
+// tablet 모드(기준디자인 744px) --------------------------------
+$desktop : 1440px;
+@media all and (max-width:($desktop - 1)) {
+  $btn_size: 2.125rem;
+  .navi_btn { 
+    display:block; 
+    width: $btn_size; height: $btn_size; 
+    box-sizing: border-box; padding: 0.125rem;
+
+    & button {
+      padding:0;
+      font-size:1.25rem;
+      line-height: 0;
+      background-color: transparent;
+    }
+  }
+  .navi_area {
+    &.action { display:flex; }
+    display:none; justify-content: space-between; flex-direction: row-reverse;
+    position: absolute; top: calc(100% + 10px); right:-0.625rem;
+    width:100vw; height:auto; background-color: #d8d8d8; 
+    box-sizing: border-box; padding:20px 5.376344vw; // 744px기준 40px값 : 5.376344%
+    ul {gap:5.376344vw; font-size:0.75rem; color:#fff; }
+  }
+
+
+}
+
+// vw계산방법 : 수치 / 기준디바이스가로 * 100 = 값vw;
+// vw, vh, v-min, v-max, pc
