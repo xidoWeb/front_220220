@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* IR 기법 참조 */
+$path : './';
+
+.blind_area a,
+.blind_area button {
+  display: block; width: 100%; height: 100%;
+  background-image: $path; 
+  background-repeat: no-repeat; background-position: 50% 50%;
+}
+
+.blind_area a>span,
+.blind_area button>span,
+.blind {display:block; 
+  position: absolute; z-index: -1;
+  width: 0; height: 0; overflow: hidden;}
+
+.clearfix { height:auto; }
+.clearfix:after, 
+.clearfix::after { content:""; display:block; width: 100%; height: auto; clear:both;}
+
+.width_set {
+  width: 100%; max-width: 1440px; height: 100%; margin:auto; }  
+
+.content_wrapper { width: 100%; height: auto; }
+.width_row {
+  position: relative;
+  width:100%; max-width:1100px; height: auto;
+  margin:auto; background-color: #ccc;}

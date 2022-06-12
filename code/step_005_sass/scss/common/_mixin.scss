@@ -45,8 +45,21 @@ $url:'./path/';
   }
   &:hover, &:focus { @content; }
 }
- li a {
-   @include btnImage($f:'a.png',$s:contain){
-     border:3px solid $primary2;
-   }; 
+
+
+// ===========================================
+@mixin container() {
+  width: 100%; max-width:1400px; height: 100%; min-height:50px; margin:auto;
+}
+
+@mixin flex($j:space-between, $v:flex-end){
+  display:flex; justify-content:$j; align-items:$v;
+}
+
+
+// responsive =========================================
+@mixin rwd($r:$laptop){
+  @media all and ( max-width:($r - 1) ) {
+    @content;
   }
+}

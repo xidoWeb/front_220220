@@ -1,0 +1,11 @@
+// layout_test.scss
+/* layout_test.css */
+
+#wrap {
+  width: 100%; height: auto;  margin:auto;
+}
+
+@import "../temp/header";
+@import "../temp/layout_content";
+@import "../temp/footer";
+  

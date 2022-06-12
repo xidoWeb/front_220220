@@ -1,0 +1,93 @@
+// header.scss
+/* header ============================ */
+@use "sass:math"; 
+@use "../common/variable" as var;
+@use '../common/mixin' as *;
+
+#headBox {
+  width: 100%; height: 100px;
+  box-sizing: border-box; padding:10px;
+  background-color: var.$primary;
+
+  & .container {
+    @include container();
+    @include flex();
+    background-color: #fff;
+  }
+  @at-root h1 { width:150px; height:100%; background-color: var.$primary2; }
+  @at-root .gnb { width:500px; height:40px; background-color: var.$color-light_gray_01; 
+    & .gnb_btn { display: none;}
+    & ul { width:auto; height:100%; @include flex(); }    
+    & li { width:auto; height:100%; }
+    & li>a {display:flex; width:auto; height:100%; align-items: center;}
+  }
+
+  // responsive ===========================================
+  @include rwd(){
+    .container { align-items: flex-start;}
+    @at-root .gnb { width: auto;
+      & .gnb_btn { 
+        display:block; 
+        width: 40px; height: 40px; box-sizing: border-box; padding: 5px;
+        button { @include full(); }
+      }
+      & ul { display:none;}
+    } // .gnb
+  }; // @include rwd (@media)
+  
+} // #headBox
+
+// ---------------------------------
+
+
+@include rwd(){
+  .container { align-items: flex-start;}
+  @at-root .gnb { width: auto;
+    & .gnb_btn { display:block; 
+      width: 40px; height: 40px; box-sizing: border-box; padding: 5px;
+      button { @include full(); } }
+    & ul { display:none;}
+  } // .gnb
+}; // @include rwd (@media)
+
+
+@media all and (max-width:1023px) {
+  #headBox .container { align-items: flex-start;}
+  .gnb { width: auto;}
+  .gnb .gnb_btn { 
+    display:block; 
+    width: 40px; height: 40px; box-sizing: border-box; padding: 5px;}
+  .gnb button { 
+    display:block; width:100%; height:100%; }
+  .gnb button > span{ 
+    display:block; position:absolute; z-index: -1;
+    clip:rect(0,0,0,0); width:1px; height:1px; overflow: hidden; }
+  .gnb ul { display:none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+$phone : 320px;
+$tablet : 600px;
+$laptop: 1024px;
+$desktop: 1366px; 
+*/
+
+
+
+// @media all and (max-width:599px) {}
+// @media all and (min-width:600px) and (max-width:1023px) {}
+// @media all and (min-width:1024px) and (max-width:1365px) {}
+// @media all and (min-width:1366px){}
+
+
