@@ -1,27 +1,47 @@
 // b_01_responsive_js.js
 
-//1 .navi_btn내부 button요소를 선택 시 -> 형제요소인 .navi_area를 .action의 add/remove 처리
 
+// @media all and (max-width:1439px) {}
+{
+/*
+const deviceWidth = $(window).outerWidth();
+const setWidth = 1440;
 
-const naviBtn = document.querySelector('.navi_btn');
-const naviArea = document.querySelector('.navi_area');
-const naviBtnSel = [].slice.call(naviBtn.children)[0]; 
-// children은 유사배열이기에 배열기능사용할 수 없다. -> 진짜 배열로 전환하여 사용한다.
-const naviBtnI = naviBtn.querySelector('i');
-const ACTION_TEXT = 'action';
-const BTNICON = ['fa-bars','fa-xmark'];
+$(window).on('resize',function(e){
+  const afterWidth = $(window).outerWidth();
 
-naviBtnSel.addEventListener('click', function(e){
-  e.preventDefault();
-  // naviArea.classList.add(ACTION_TEXT);
-  const check = naviArea.classList.contains(ACTION_TEXT);
-  if(!check){
-    naviArea.classList.add(ACTION_TEXT);
-    naviBtnI.classList.remove(BTNICON[0]);
-    naviBtnI.classList.add(BTNICON[1]);
-  }else{
-    naviArea.classList.remove(ACTION_TEXT);
-    naviBtnI.classList.remove(BTNICON[1]);
-    naviBtnI.classList.add(BTNICON[0]);
+  if(deviceWidth !== afterWidth){
+    if(setWidth <= afterWidth){
+      // desktop 기준
+      location.reload();
+    }else{
+      // tablet 이하 기준
+      location.reload();
+    }
   }
 })
+*/
+}
+
+const dataFile = {
+  handhelds: '../js/src/b_01_responsive_handhelds.js'
+};
+
+const body = document.querySelector('body');
+
+const desktopWidth = 1440;
+const widthCheck = window.matchMedia(`(max-width:${desktopWidth - 1}px)`);
+
+console.log( widthCheck );
+
+widthCheck.addEventListener('change', function(e){
+  // change값이 true이면 tablet기기에 대한 값이므로, b_01....파일을 불러와서 사용
+  // console.log( e.matches );
+  
+  const makeScript = document.createElement('script');
+
+  if(e.matches){
+    makeScript.setAttribute('src', dataFile.handhelds);
+    body.append(makeScript);
+  }  
+});
