@@ -1,4 +1,5 @@
-
+// FootBox.js
+import './FootBox.css';
 
 function FootBox(){
   return (

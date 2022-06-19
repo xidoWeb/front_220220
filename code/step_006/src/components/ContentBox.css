@@ -1,0 +1,8 @@
+/* ContentBox.css */
+
+#ContentBox{
+  width:100%; height:1200px; 
+  padding-top:60px;
+  background-image: linear-gradient(180deg, #ddf, #fda);
+  background-color: #fda;
+}

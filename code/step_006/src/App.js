@@ -1,7 +1,6 @@
 import HeadBox from './components/HeadBox';
 import ContentBox from './components/ContentBox';
 import FootBox from './components/FootBox';
-
 import './App.css';
 
 function App() {
