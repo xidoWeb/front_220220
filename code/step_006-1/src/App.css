@@ -1,0 +1,41 @@
+ol,ul,li,dl,dt,dd { margin: 0; padding: 0; list-style: none;}
+
+.App {
+  width: 100%; min-width:900px; max-width:1440px;
+  background-color: #dfdfdf;
+  text-align: center;
+}
+
+.App ol {
+  display: flex; justify-content: center; gap:20px;
+  width: 100%; height:auto; box-sizing: border-box; padding: 1rem; 
+}
+.App li {
+  width: 200px; height: 350px; border:1px solid #777;
+}
+.App .image {
+  width: 100%; height: 150px;
+  background-color: #faa;
+}
+.App dl {
+  position: relative;
+  width: 100%; height: calc(100% - 150px); 
+  box-sizing:border-box; padding:0.5rem;
+  background-color: #adf;
+  text-align: left;
+}
+.App dt {
+  font-size: 1.1rem; font-weight: 700;
+  text-transform: capitalize;
+}
+.App dd {
+  color:#555;
+}
+
+.App .price {
+  position: absolute; bottom: 1rem; left: 0.5rem;
+  width: calc(100% - 1.5rem);
+  padding:0.2rem; margin-top: 0.2rem;
+  color:#fff;
+  background-color: #595;
+}
