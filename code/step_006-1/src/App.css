@@ -15,6 +15,9 @@ ol,ul,li,dl,dt,dd { margin: 0; padding: 0; list-style: none;}
 }
 .App .image {
   width: 100%; height: 150px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
   background-color: #faa;
 }
 .App dl {
