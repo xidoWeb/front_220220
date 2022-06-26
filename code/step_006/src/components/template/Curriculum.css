@@ -1,0 +1,15 @@
+/* Curriculum.css */
+
+.Curriculum {
+  width: 100%; max-width:1200px;
+  height:auto; min-height:400px;
+  margin:auto;
+  background-color: #ddf;
+}
+
+abbr { text-decoration: none; }
+
+.curriculum_area {
+  width: 100%; height:auto; 
+  background-color: #fff;
+}
