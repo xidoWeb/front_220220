@@ -1,0 +1,7 @@
+
+@import './common/variable';
+
+.App { 
+  width: 900px; height:auto; min-height:400px;
+  margin:auto; background-color: $color-white_02;
+}

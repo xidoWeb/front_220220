@@ -1,0 +1,26 @@
+@import './common/variable';
+
+h1 {width: 120px; height: 120px;}
+
+h1 a {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  
+  background-color: #fdd;
+  // background-image: url('./logo.svg');
+}
+
+
+.size {
+  width: 120px; height: 120px; 
+  border:1px solid #333;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+img {
+  width:auto; height:auto;
+  max-width:100%; max-height:100%;
+}
