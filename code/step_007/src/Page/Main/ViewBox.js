@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './ViewBox.scss';
 
 function ViewBox() {
   const total = 4;
   const [count, setCount] = useState(0);
+  const listData = [1,2,3,4,5];
 
   useEffect( () => {
     console.log( count );
@@ -19,9 +21,6 @@ function ViewBox() {
     count <= 0 ? setCount(total) : setCount(count - 1);
    }
 
-  // const Next = document.querySelector('.next');
-  // Next.addEventListener('click', handlerNextClick);
-
   return (
     <section id="viewBox">
       <h2 className='blind'>광고 영역</h2>
@@ -35,21 +34,12 @@ function ViewBox() {
       </div>
       <div className='indicators'>
         <ul className='blind_area'>
-          <li><a href="#">
-            <span>1번째 광고 요약 설명</span>
-          </a></li>
-          <li><a href="#">
-            <span>2번째 광고 요약 설명</span>
-          </a></li>
-          <li><a href="#">
-            <span>3번째 광고 요약 설명</span>
-          </a></li>
-          <li><a href="#">
-            <span>4번째 광고 요약 설명</span>
-          </a></li>
-          <li><a href="#">
-            <span>5번째 광고 요약 설명</span>
-          </a></li>
+          {listData.map((data, index) => 
+            <li key={uuidv4()} className={count === index ? 'action' : null}>
+              <a href="#" onClick={(e)=> {e.preventDefault(); return setCount(index)} }>
+                <span>{data}번째 광고 요약 설명</span>
+              </a>
+            </li>)}
         </ul>
         <p>
           <span className='now'>{ count + 1 }</span>/
@@ -58,11 +48,9 @@ function ViewBox() {
       </div>
       <div className='slide_wrapper fade_area'>
         <ul>
-          <li>광고1</li>
-          <li>광고2</li>
-          <li>광고3</li>
-          <li>광고4</li>
-          <li>광고5</li>
+          {listData.map((data, index)=>
+            <li key={uuidv4()} className={count === index ? 'action' : null}>광고{data}</li>
+          )}
         </ul>
       </div>
     </section>
