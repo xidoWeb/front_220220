@@ -1,21 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './ViewBox.scss';
 
 function ViewBox() {
+  const total = 4;
+  const [count, setCount] = useState(0);
+
+  useEffect( () => {
+    console.log( count );
+  }, [count]);
+
+  const handlerNextClick = (e) => { 
+    e.preventDefault();
+    count >= total ? setCount(0) : setCount(count + 1);    
+  }
+
+  const handlerPrevClick = (e) => {
+    e.preventDefault();
+    count <= 0 ? setCount(total) : setCount(count - 1);
+   }
+
+  // const Next = document.querySelector('.next');
+  // Next.addEventListener('click', handlerNextClick);
+
   return (
     <section id="viewBox">
       <h2 className='blind'>광고 영역</h2>
       <div className='buttons'>
-        <button type="button" className='next'>
-          <span>next</span>
+        <button type="button" className='next' onClick={handlerNextClick}>
+          <span className='blind'>next</span>
         </button>
-        <button type="button" className='prev'>
-          <span>prev</span>
+        <button type="button" className='prev' onClick={handlerPrevClick}>
+          <span className='blind'>prev</span>
         </button>
       </div>
       <div className='indicators'>
         <ul className='blind_area'>
-          <li className='action'><a href="#">
+          <li><a href="#">
             <span>1번째 광고 요약 설명</span>
           </a></li>
           <li><a href="#">
@@ -32,8 +52,8 @@ function ViewBox() {
           </a></li>
         </ul>
         <p>
-          <span className='now'>1</span>/
-          <span className='total'>5</span>
+          <span className='now'>{ count + 1 }</span>/
+          <span className='total'>{ total + 1 }</span>
         </p>
       </div>
       <div className='slide_wrapper fade_area'>
