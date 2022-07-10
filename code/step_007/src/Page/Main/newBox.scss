@@ -1,0 +1,68 @@
+
+@import '../../common/variable';
+@import '../../common/mixin';
+
+#newBox {
+  width: 100%; height: auto; min-height:25rem;
+  box-sizing: border-box; padding:1rem; padding-top: 1.5rem;
+  border-bottom:1px solid $color-deepGray;
+}
+
+#newBox h2 {
+  width: 100%; height: auto; margin-bottom: 1rem;
+  font-size:$font-title_03; color:$color-black_02;
+}
+
+.CardArea {
+  width: 100%; max-width:800px; height:auto; 
+  margin:auto; 
+  background-color: #fff;
+
+  & > ul {
+    display: flex; gap:10px; justify-content: center;
+    flex-wrap: wrap;
+    width: 100%; height: auto; min-height:250px;
+    box-sizing: border-box; padding: 0.5rem; 
+    background-color: #ddd;
+  }
+
+  & li {
+    width: 250px; height: 250px; background-color: #fa0;
+    box-sizing: border-box;
+    border:1px solid $color-light_gray_03;
+  }
+  & a {
+    display:flex; align-items: flex-end;
+    position: relative;
+    width: 100%; height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    &::before {
+      content: ''; display: block;
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; 
+      background-color:  rgba($color-light_gray_03, 0.7);
+      transition:opacity 300ms linear;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 10% auto; 
+    }
+    &:hover::before { opacity: 0;}
+  }
+
+  dl {
+    width: 100%; height: auto; background-color: rgba($white, 0.9);
+    box-sizing: border-box; padding: 1rem;
+
+    & > dt { 
+      font-size:1.2rem; font-weight: 700; color:$color-black_02;
+      &::first-letter { text-transform: uppercase; }
+    }
+    & > dd {
+     font-weight: 500; color:$color-light_gray_03;
+    }
+  }
+}
+

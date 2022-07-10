@@ -1,0 +1,11 @@
+@import '../common/variable';
+@import '../common/mixin';
+
+#footBox {
+  width: 100%; height: auto; min-height:60px;
+  box-sizing: border-box;
+  padding-top: 2rem; padding-bottom: 3rem;
+  padding-left:1rem; padding-right: 1rem;
+  color:$white;
+  background-color: $color-deep_gray;
+}

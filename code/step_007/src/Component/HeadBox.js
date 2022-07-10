@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './HeadBox.scss';
 
 function HeadBox() {
   return (
-    <div>HeadBox</div>
+    <header id="headBox">HeadBox</header>
   )
 }
 

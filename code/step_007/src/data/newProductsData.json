@@ -1,0 +1,58 @@
+[
+  {
+    "id":1,
+    "img":"card_image_001.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title11",
+    "content":"lorem text1"
+  },
+  {
+    "id":2,
+    "img":"card_image_002.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title21",
+    "content":"lorem text2"
+  },
+  {
+    "id":3,
+    "img":"card_image_003.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title31",
+    "content":"lorem text3"
+  },
+  {
+    "id":4,
+    "img":"card_image_004.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title41",
+    "content":"lorem text4"
+  },
+  {
+    "id":5,
+    "img":"card_image_005.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title51",
+    "content":"lorem text5"
+  },
+  {
+    "id":6,
+    "img":"card_image_006.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title61",
+    "content":"lorem text6"
+  },
+  {
+    "id":7,
+    "img":"card_image_007.jpg",
+    "alt":"설명",
+    "link":"#",
+    "title":"title71",
+    "content":"lorem text7"
+  }
+]
