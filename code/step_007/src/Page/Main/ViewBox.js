@@ -31,17 +31,24 @@ function ViewBox() {
   }
   const handlerPrevClick = (e) => {
     e.preventDefault();
+    stopSlide(); 
     count <= 0 ? setCount(listData.length - 1) : setCount(count - 1);
    }
 
-  const startSlide = ()=> moveSlide.current = setInterval(()=>{  handlerNextClick() }, timed);
-  const stopSlide = ()=> clearInterval(moveSlide.current);
+  const startSlide = ()=> 
+    moveSlide.current = setInterval(()=>{  
+      handlerNextClick();            
+    }, timed);
+
+  function stopSlide(){ 
+    clearInterval(moveSlide.current);
+  }
 
 
   useEffect( () => {
     startSlide();
     return ()=> stopSlide();
-  })
+  }, [count])
  
 
   return (
