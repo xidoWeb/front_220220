@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* c_01_js_slidebBanner.css */
+
+#wrap {
+  width: 100%; height: auto;
+  max-width:1200px;
+  margin:auto; padding-top: 3rem;
+  padding-bottom: 1500px;
+}
+h1 { margin-bottom: 1.5rem;}
+
+#viewBox {
+  position: relative;
+  width: 1200px; height: 600px;
+  margin:auto;
+  border:1px solid #333;
+}
+
+.slide_buttons {
+  position: absolute; z-index: 100;
+  top: 0; bottom: 0; margin:auto;
+  width: 100%; height:0;
+}
+
+.slide_buttons button {
+  width:3rem; height:auto; 
+  float:left; 
+  padding:0.5rem 0.2rem;
+  background-color: #08f;
+  transform:translateY(-50%);
+}
+
+.slide_buttons button.next {
+  float:right;
+}
+
+.indicators {
+  position: absolute; z-index: 100;
+  left: 0; right:0; margin:auto;
+  bottom:-3rem;
+  width:100%; height:auto;
+}
+
+.indicators ul{
+  width: auto; height: auto;
+  padding:0.2rem;
+  display:flex;
+  justify-content: center;
+  gap:20px;
+  align-items: center;
+  background-color: #ddd;
+}
+.indicators li{
+  width: 1.5rem; height: 1.5rem;
+}
+
+.indicators li a {
+  display: block; 
+  width: 100%; height: 100%; 
+  border:1px solid #555;
+  border-radius: 4rem;
+  background-color: #fff;
+}
+
+.indicators li.action a {
+  background-color: #fa0;
+}
+.indicators li.action {
+  width:4rem;
+}
+
+
+/* ----------------------------------------------- */
+.view_area {
+  width: 100%; height: 100%; 
+  overflow: hidden;
+}
+
+.view_area ul {
+  position: relative; left: 0; top: 0;
+  width:calc(100% * 6); height:100%; background-color: #ddd;
+  margin-left:-100%; 
+  display: flex;
+  transition:all 500ms linear;
+}
+.view_area ul.transition_none {
+  transition:none;
+}
+
+
+.view_area li {
+  width:calc(100% / 6); height:100%; 
+  text-align: center;
+  line-height:600px; 
+  font-size:2rem; font-weight: 700;
+}
+
+.view_area li.main_view_01 { background-color:#ac1;}
+.view_area li.main_view_02 { background-color:#6cf;}
+.view_area li.main_view_03 { background-color:#a7f;}
+.view_area li.main_view_04 { background-color:#fc7;}
+.view_area li.main_view_05 { background-color:#f7f;}
+
