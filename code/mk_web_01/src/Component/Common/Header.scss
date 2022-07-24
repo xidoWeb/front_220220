@@ -1,0 +1,25 @@
+@use '../../common/variable' as *;
+
+.container {
+  display:flex; justify-content:space-between;
+  align-items: center;
+  width: 100%; max-width:75rem; height:3.75rem;
+  margin:auto; padding-top: 3.75rem;
+  background-color: #fff;
+}
+
+h1 { order:0; }
+.search{ order:1; }
+.gnb{ width: auto; height:auto;
+  ul {
+    display:flex; justify-content: center; gap:2.5rem;
+    text-transform: capitalize; font-size:1rem; font-weight: 400;
+    color:$color-black;
+
+    li {width:auto; height:auto; 
+      &.active { font-weight: 700;}
+    }
+    a {padding:0.3125rem 0.625rem;}
+  }
+
+}
