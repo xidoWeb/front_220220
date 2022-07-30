@@ -1,0 +1,43 @@
+@use '../common/variable' as *;
+@use '../common/mixin';
+
+.card_user {
+  width:15.625rem; height:auto; 
+  box-sizing: border-box; 
+  padding:0.2rem; padding-bottom:1rem;
+  border:0.0625rem solid #ccc; 
+  background-color: #fff;
+
+  .user_image {
+    overflow: hidden;
+    position: relative;
+    $size : 14.375rem; 
+    width: $size; height: $size;
+    border-radius:$size;
+    margin:auto;
+    margin-bottom:1.5rem;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    & img {
+      position: absolute; 
+      width: auto; height: auto;
+      min-width:100%; min-height:100%;
+    }
+  }
+  p {
+    width: 100%; height: auto;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .user_name {    
+    margin-bottom: 0.3rem;    
+    font-weight: 900; font-size: 1.1rem;    
+  }
+  .use_position {   
+    color:$color-light_gray_02;
+    font-weight: 700;
+  }
+}

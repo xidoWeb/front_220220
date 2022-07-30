@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import uuid from 'react-uuid';
 import './Header.scss';
+import  ContainerApp  from '../ContainerApp';
 
 function Header() {
   const gnbList = [
@@ -18,7 +19,7 @@ function Header() {
 
   return (
     <header id="headBox">
-      <div className="container">
+      <ContainerApp>
         <h1><Link to="/">busin</Link></h1>
         <nav className="search">search</nav>
         <nav className="gnb">
@@ -44,7 +45,7 @@ function Header() {
             <li><NavLink to="blog">blog</NavLink></li> */}
           </ul>
         </nav>
-      </div>
+      </ContainerApp>
     </header>
   )
 }

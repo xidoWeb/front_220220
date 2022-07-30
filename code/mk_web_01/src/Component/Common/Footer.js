@@ -1,13 +1,14 @@
 import React from 'react';
-import Container from '../Container';
+import ContainerApp from '../ContainerApp';
 
 function Footer() {
   return (
     <footer id="footBox">
-      <div className="container">
+      {/* <div className="container"> */}
+      <ContainerApp>
         <h2>Footer</h2>
-        
-      </div>
+      </ContainerApp> 
+      {/* </div> */}
     </footer >
   )// super
 }

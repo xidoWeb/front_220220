@@ -1,0 +1,56 @@
+@use '../common/variable' as *;
+@use '../common/mixin';
+
+.card_link {
+  position: relative; z-index: 0;
+  width:15.625rem; height:300px; 
+  box-sizing: border-box; 
+  padding:0.2rem; padding-bottom:1rem;
+  border:0.0625rem solid #ccc; 
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;  
+
+  &::before {
+    content:''; display: block;
+    position: absolute; z-index: -1; top: 0; left: 0;
+    width: 100%; height: 100%; 
+    background-image:linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 70%);
+  }
+
+  & img {
+    position: absolute; z-index:-2; 
+    top: 0; left: 0; right: 0; bottom: 0; 
+    width: auto; height: auto; 
+    min-width:100%; min-height:100%; 
+    margin:auto; 
+  }
+  
+  a {
+    display: block;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction:column;
+  }
+ 
+  dl {
+    width: 100%; height: auto;
+    text-align: center;
+    color:$color-white;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  dt {width:100%; height:auto;  
+    margin-bottom: 0.3rem;    
+    font-weight: 900; font-size: 1.1rem;    
+  }
+  dd {width:100%; height:auto;}
+}
+ 
