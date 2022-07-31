@@ -1,4 +1,5 @@
 // import React, {useEffect, useState} from 'react';
+import ContainerApp from '../Component/ContainerApp';
 import MainView from './Main/MainView';
 import Amazing from './Main/Amazing';
 import Company from './Main/Company';
@@ -14,9 +15,16 @@ function Main() {
       <MainView />
       <Amazing />
       <Company />
-      <Pricing />
+      <ContainerApp>
+        <Pricing />
+      </ContainerApp>
+
       <Testimonals />
-      <Lastest />
+
+      <ContainerApp>
+        <Lastest />        
+      </ContainerApp>
+      
       <Experience />
     </div>
   )

@@ -1,0 +1,38 @@
+// Tesimonals.scss
+@use '../../common/variable' as *;
+
+#testimonals {
+  width: 100%; height:auto;
+  background-color: #999;
+  box-sizing: border-box;
+  padding-top:70px; 
+  padding-bottom:100px; 
+  color:$color-white;
+  
+  & .container { background-color:transparent; }
+  & .container h3 { 
+    margin-bottom: 1.2rem;
+    font-weight: 400;}
+  & .container p {
+    margin-bottom: 3rem;
+    font-size: 1.2rem; font-weight: 700;}
+  }
+
+  .worked_card_list {
+    overflow: hidden;
+    width: 100%; height: auto; min-height:500px;
+    background-color: #777;
+
+    .card_list {
+      display:flex; justify-content: flex-start; gap:30px;
+      flex-wrap:nowrap; 
+      width: 3500%; height:410px; background-color: #aaf;
+      & > li {
+        width:360px; height:410px;
+        box-sizing: border-box;
+        padding:1.5rem; 
+        color:#333;
+        background-color: #fff;
+      }
+    }
+  }

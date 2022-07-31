@@ -9,7 +9,7 @@ function Company() {
         <div className="image">
           <span className="blind">이미지설명</span>
         </div>
-        <div class="detail_contens">
+        <div className="detail_contens">
           <h4>our company</h4>
           <dl>
             <dt>Creator of quality designs<br />
@@ -27,7 +27,7 @@ function Company() {
         <div className="image">
           <span className="blind">이미지설명</span>
         </div>
-        <div class="detail_contens">
+        <div className="detail_contens">
           <h4>the difference</h4>
           <dl className='detail_list'>
             <dt>Experience true business performance increases</dt>

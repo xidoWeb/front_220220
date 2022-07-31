@@ -17,6 +17,9 @@
   .image {
     width: calc(100% - 660px); height:100%; 
     background-color: #ada;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
   }
   .detail_contens {
     width:660px; height:100%; 
