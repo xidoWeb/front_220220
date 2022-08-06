@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="app">
+    <h1>company</h1>
+    <div class="input_area">
+      <h2>ID 로그인</h2>
+      <form method="POST" class="login_part">
+        <fieldset class="login_input">
+          <legend>개인 로그인 정보</legend>
+
+          <div class="input_item">
+            <input type="text" name="" id="use__id" value="" placeholder="아이디" 
+            required
+            />
+
+            <label for="use__id">
+              <i class="user"></i>
+              <span class="blind">
+                아이디를 입력하세요.
+              </span>
+            </label>           
+          </div>
+
+          <div class="input_item">            
+             <input type="password" name="" id="user_pw" value="" placeholder="비밀번호"
+             required />
+
+             <label for="user_pw">
+              <i class="lock"></i>
+              <span class="blind">
+                비밀번호를 입력하세요.
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="login_state">
+          <legend>상태 유지 및 체크</legend>
+          <input type="checkbox" 
+                 name="checkState" 
+                 id="checkState"
+                 value="state_use"
+                 class="blind" />
+          <label for="checkState">
+            <i class="check"></i>
+            check
+          </label>
+        </fieldset>
+
+        <fieldset class="login_send">
+          <legend>확인 및 로그인</legend>
+          <input 
+            type="submit" 
+            id="login"
+            value="로그인" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const submitBtn = document.querySelector('#login');
+    submitBtn.addEventListener('click', e => {
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>

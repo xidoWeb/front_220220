@@ -5,11 +5,12 @@ import './Tesimonals.scss';
 function Testimonals() {
 
   const cardList = [];
-  const [list, setList] = useState(cardList);
-  // for(let i=0; i<35; i++){
-  //   setList(list=> {...list, })
-  // }
-  
+  // const [list, setList] = useState(cardList);
+  for(let i=0; i<21; i++){
+    cardList.push(i);
+  }
+  const indicatorLen = Math.ceil(cardList.length / 5);
+
   return (
     <article id="testimonals"> 
       <ContainerApp>

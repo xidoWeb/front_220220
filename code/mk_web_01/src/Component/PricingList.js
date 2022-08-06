@@ -8,7 +8,7 @@ function PricingList(props) {
   const listData = ['lorem1','lorem2','lorem3','lorem4'];
 
   return (
-    <li className={point ? 'point' : null}>
+    <li className={point ? 'point' : null} >
       <dl>
         <dt>basic</dt>
         <dd>
@@ -20,9 +20,8 @@ function PricingList(props) {
       <ul>
         {
         listData.map((data, index)=> 
-          <li>
-            <FontAwesomeIcon 
-              key={index}
+          <li key={index}>
+            <FontAwesomeIcon              
               icon={faCheck} 
               style={{color:'#6c73b5', marginRight:'1rem'}} /> 
              {data}
